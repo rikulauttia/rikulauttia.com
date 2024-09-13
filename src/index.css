@@ -1,13 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  @apply bg-black text-white;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 30px;
 }
