@@ -1,6 +1,7 @@
 import React from "react";
+
 import { motion, useScroll, useSpring } from "framer-motion";
-import { FaLinkedinIn, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Cursor = () => {
   const [cursorPos, setCursorPos] = React.useState({ x: 0, y: 0 });
@@ -224,7 +225,7 @@ const App = () => {
           </div>
           <div>
             <h3 className="text-2xl font-semibold mb-4">Location</h3>
-            <p>Helsinki, Finland</p>
+            <p>Turku, Finland</p>
           </div>
         </div>
       </Section>
