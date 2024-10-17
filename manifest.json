@@ -3,18 +3,18 @@
   "name": "Riku Lauttia",
   "icons": [
     {
-      "src": "RL.jpg",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/jpeg"
+      "src": "favicon.ico",
+      "sizes": "100x100",
+      "type": "image/x-icon"
     },
     {
-      "src": "RL.jpg",
-      "type": "image/jpeg",
+      "src": "logo192.png",
+      "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "RL.jpg",
-      "type": "image/jpeg",
+      "src": "logo512.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ],
