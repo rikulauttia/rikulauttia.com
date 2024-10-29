@@ -225,7 +225,7 @@ const App = () => {
           </div>
           <div>
             <h3 className="text-2xl font-semibold mb-4">Location</h3>
-            <p>Finland</p>
+            <p>Turku, Finland</p>
           </div>
         </div>
       </Section>
