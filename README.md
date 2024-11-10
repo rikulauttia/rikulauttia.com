@@ -26,17 +26,20 @@ This project was built using Create React App and GitHub Pages.
 ```bash
 git clone https://github.com/rikulauttia/rikulauttia-website.git
 cd rikulauttia-website
+```
 
 2. Install dependencies
 ```bash
 npm install
+```
 
 3. Run development server
+```bash
 npm start
+```
 
-Contact
-
-Email: riku@lauttia.com
-LinkedIn: linkedin.com/in/rikulauttia
-GitHub: @rikulauttia
-Twitter: @rikulauttia
+## Contact
+- Email: [riku@lauttia.com](mailto:riku@lauttia.com)
+- LinkedIn: [linkedin.com/in/rikulauttia](https://linkedin.com/in/rikulauttia)
+- GitHub: [@rikulauttia](https://github.com/rikulauttia)
+- Twitter: [@rikulauttia](https://x.com/rikulauttia)
