@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 
 import {
-  animate,
   motion,
+  useInView,
   useMotionTemplate,
   useMotionValue,
   useScroll,
@@ -16,45 +16,129 @@ const HeroSection = () => {
   const y = useTransform(scrollY, [0, 1000], [0, 200]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
   const scale = useTransform(scrollY, [0, 300], [1, 1.2]);
+  const textY = useTransform(scrollY, [0, 300], [0, 100]);
 
   return (
-    <motion.section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <motion.div className="absolute inset-0 z-0" style={{ y, scale }}>
+    <div className="absolute inset-0 w-full h-full">
+      <motion.div
+        className="absolute inset-0 w-full h-full"
+        style={{ y, scale }}
+      >
         <img
           src="/rikulauttia.jpg"
           alt="Riku Lauttia"
-          className="w-full h-full object-cover filter brightness-75"
+          className="w-full h-full object-cover object-center filter brightness-[0.6] contrast-125"
         />
         <motion.div
-          className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30"
+          className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-black/80"
           style={{ opacity }}
         />
+        {/* Modern geometric overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_0%,transparent_100%)]" />
       </motion.div>
 
       <motion.div
-        className="relative z-10 text-center text-white"
-        style={{ opacity }}
+        className="relative z-10 h-full w-full flex items-center justify-center text-center text-white px-4"
+        style={{ opacity, y: textY }}
       >
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-8xl font-bold mb-6 tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300"
-        >
-          Riku Lauttia
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="text-3xl font-light"
-        >
-          <span className="text-white">Entrepreneur</span> |{" "}
-          <span className="text-white">AI Innovator</span> |{" "}
-          <span className="text-white">Fullstack Developer</span>
-        </motion.p>
+        <div className="relative">
+          {/* Decorative elements */}
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 0.1 }}
+            transition={{ duration: 1.5, delay: 0.2 }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] border border-white/20 rounded-full"
+          />
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 0.15 }}
+            transition={{ duration: 1.5, delay: 0.4 }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] border border-white/20 rounded-full"
+          />
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-5xl md:text-7xl lg:text-9xl font-black mb-8 tracking-tighter"
+          >
+            <span className="inline-block bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/70 [-webkit-text-stroke:1px_rgba(255,255,255,0.1)]">
+              RIKU LAUTTIA
+            </span>
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6 text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight"
+          >
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              className="text-white/90 relative"
+            >
+              ENTREPRENEUR
+              <span className="mx-3 text-white/20 hidden md:inline">|</span>
+            </motion.span>
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              className="text-white/90 relative"
+            >
+              AI INNOVATOR
+              <span className="mx-3 text-white/20 hidden md:inline">|</span>
+            </motion.span>
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              className="text-white/90 relative"
+            >
+              FULLSTACK DEVELOPER
+            </motion.span>
+          </motion.div>
+
+          {/* Subtle animated line */}
+          <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 1 }}
+            transition={{ duration: 1.5, delay: 0.8 }}
+            className="absolute -bottom-20 left-1/2 transform -translate-x-1/2 w-32 h-[1px] bg-gradient-to-r from-transparent via-white/50 to-transparent"
+          />
+        </div>
       </motion.div>
-    </motion.section>
+
+      {/* Dynamic grain overlay */}
+      <div className="pointer-events-none absolute inset-0 noise mix-blend-overlay" />
+    </div>
+  );
+};
+
+const ScrollReveal = ({ children, delay = 0 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ y: 50, opacity: 0 }}
+      animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+      transition={{
+        duration: 1,
+        delay: delay,
+        ease: [0.21, 0.45, 0.32, 0.9],
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const ParallaxContainer = ({ children, speed = 0.5 }) => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 1000], [0, 200 * speed]);
+
+  return (
+    <motion.div style={{ y }} className="relative">
+      {children}
+    </motion.div>
   );
 };
 
@@ -97,12 +181,12 @@ const SkillCategory = ({ title, skills, index }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="p-6 backdrop-blur-lg bg-white/5 rounded-xl border border-white/10"
+      className="p-8 backdrop-blur-lg bg-white/[0.02] rounded-none border border-white/[0.05] hover:bg-white/[0.04] transition-all duration-500"
     >
-      <h3 className="text-xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+      <h3 className="text-xl md:text-2xl font-bold mb-6 text-white tracking-tight">
         {title}
       </h3>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {skills.map((skill, idx) => (
           <motion.div
             key={skill}
@@ -111,8 +195,7 @@ const SkillCategory = ({ title, skills, index }) => {
             transition={{ duration: 0.3, delay: idx * 0.05 }}
             className="group relative"
           >
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded opacity-0 group-hover:opacity-50 blur transition duration-500" />
-            <div className="relative p-2 bg-black/50 rounded text-sm hover:text-white transition-colors">
+            <div className="relative p-2 text-white/70 hover:text-white transition-colors duration-300 text-sm md:text-base tracking-wider">
               {skill}
             </div>
           </motion.div>
@@ -124,52 +207,76 @@ const SkillCategory = ({ title, skills, index }) => {
 
 const ProjectCard = ({ project, index }) => {
   return (
-    <GlowingCard className="bg-white/5">
-      <motion.div
-        className="p-8 rounded-xl"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.2 }}
-        viewport={{ once: true }}
-      >
-        <h3 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+    <motion.div
+      className="group relative overflow-hidden"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      viewport={{ once: true }}
+    >
+      <div className="p-8 backdrop-blur-lg bg-white/[0.02] border border-white/[0.05] hover:bg-white/[0.04] transition-all duration-500">
+        <h3 className="text-2xl font-bold mb-4 text-white tracking-tight group-hover:translate-x-2 transition-transform duration-300">
           {project.title}
         </h3>
-        <p className="text-gray-300">{project.description}</p>
-      </motion.div>
-    </GlowingCard>
+        <p className="text-white/70 group-hover:text-white/90 transition-colors duration-300">
+          {project.description}
+        </p>
+      </div>
+    </motion.div>
   );
 };
 
-const ParallaxText = ({ children, baseVelocity = 100 }) => {
-  const [scope, setScope] = useState(null);
-
-  useEffect(() => {
-    if (scope) {
-      animate(scope, {
-        x: [0, -1000],
-        transition: {
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear",
-        },
-      });
-    }
-  }, [scope]);
-
+const ParallaxText = ({ children }) => {
   return (
-    <div className="parallax">
-      <div ref={setScope} className="scroller">
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
+    <div className="relative flex overflow-hidden bg-transparent">
+      <div className="animate-scroll-left whitespace-nowrap flex items-center py-8">
+        {[...Array(6)].map((_, i) => (
+          <span
+            key={i}
+            className="mx-6 text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter uppercase"
+          >
+            <span className="text-white hover:text-opacity-80 transition-opacity">
+              INNOVATE
+            </span>
+            <span className="mx-2 text-white/30">•</span>
+            <span className="text-white hover:text-opacity-80 transition-opacity">
+              CREATE
+            </span>
+            <span className="mx-2 text-white/30">•</span>
+            <span className="text-white hover:text-opacity-80 transition-opacity">
+              TRANSFORM
+            </span>
+            <span className="mx-2 text-white/30">•</span>
+          </span>
+        ))}
+      </div>
+      <div className="absolute top-0 animate-scroll-left2 whitespace-nowrap flex items-center py-8">
+        {[...Array(6)].map((_, i) => (
+          <span
+            key={i}
+            className="mx-6 text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter uppercase"
+          >
+            <span className="text-white hover:text-opacity-80 transition-opacity">
+              INNOVATE
+            </span>
+            <span className="mx-2 text-white/30">•</span>
+            <span className="text-white hover:text-opacity-80 transition-opacity">
+              CREATE
+            </span>
+            <span className="mx-2 text-white/30">•</span>
+            <span className="text-white hover:text-opacity-80 transition-opacity">
+              TRANSFORM
+            </span>
+            <span className="mx-2 text-white/30">•</span>
+          </span>
+        ))}
       </div>
     </div>
   );
 };
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -178,8 +285,8 @@ const Navbar = () => {
   });
 
   return (
-    <header className="fixed top-0 left-0 w-full z-40">
-      <nav className="flex justify-between items-center py-4 px-8">
+    <header className="fixed top-0 left-0 w-full z-40 bg-black/50 backdrop-blur-sm">
+      <nav className="flex justify-between items-center py-4 px-4 md:px-8">
         <motion.div
           className="text-2xl font-bold"
           initial={{ opacity: 0, y: -20 }}
@@ -188,7 +295,39 @@ const Navbar = () => {
         >
           RL
         </motion.div>
-        <ul className="flex space-x-6">
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white p-2"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            {isMenuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-6">
           {["About", "Skills", "Projects", "Contact"].map((item, index) => (
             <motion.li
               key={item}
@@ -205,6 +344,29 @@ const Navbar = () => {
             </motion.li>
           ))}
         </ul>
+
+        {/* Mobile Menu */}
+        <motion.div
+          className={`absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg md:hidden ${
+            isMenuOpen ? "block" : "hidden"
+          }`}
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: isMenuOpen ? 1 : 0, y: 0 }}
+        >
+          <ul className="py-4">
+            {["About", "Skills", "Projects", "Contact"].map((item) => (
+              <li key={item} className="px-4 py-2">
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="block text-lg hover:text-gray-400 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
       </nav>
       <motion.div className="h-0.5 bg-white" style={{ scaleX }} />
     </header>
@@ -212,18 +374,23 @@ const Navbar = () => {
 };
 
 const Section = ({ id, title, children }) => (
-  <section id={id} className="py-20">
+  <section id={id} className="py-12 md:py-20">
     <div className="container mx-auto px-4">
-      <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-        {title}
-      </h2>
+      {title && (
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-8 md:mb-12 text-center text-white">
+          {title}
+        </h2>
+      )}
       {children}
     </div>
   </section>
 );
 
+const SectionDivider = () => (
+  <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-20" />
+);
+
 const App = () => {
-  // Define state for the entire app
   const [skills] = useState([
     {
       category: "Languages & Core",
@@ -302,120 +469,139 @@ const App = () => {
   ];
 
   return (
-    <div className="font-sans bg-black text-white">
+    <div className="font-sans bg-black text-white min-h-screen">
+      <div className="noise" />
       <Navbar />
-      <HeroSection />
 
+      {/* Hero Section */}
+      <motion.section className="relative h-screen flex items-center justify-center overflow-hidden snap-section">
+        <HeroSection />
+      </motion.section>
+
+      {/* About Section */}
       <Section id="about">
-        <ParallaxText baseVelocity={-5}>
-          INNOVATE • CREATE • TRANSFORM •
-        </ParallaxText>
-        <div className="max-w-4xl mx-auto px-4 py-20">
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-20" />
-            <div className="relative p-8 bg-black rounded-lg">
-              <p className="text-2xl leading-relaxed">
-                Pioneering the intersection of AI and entrepreneurship, I
-                transform innovative ideas into impactful solutions. Based in
-                Turku, Finland, I collaborate with forward-thinking teams
-                globally to shape the future of technology.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </Section>
-
-      <Section id="skills" title="Technical Expertise">
-        <div className="grid md:grid-cols-2 gap-6">
-          {skills.map((skillGroup, index) => (
-            <SkillCategory
-              key={skillGroup.category}
-              title={skillGroup.category}
-              skills={skillGroup.items}
-              index={index}
-            />
-          ))}
-        </div>
-      </Section>
-
-      <Section id="projects" title="Projects">
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} />
-          ))}
-        </div>
-      </Section>
-
-      <Section id="contact" title="Contact">
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="backdrop-blur-lg bg-white/5 rounded-2xl border border-white/10 p-8 text-center">
+        <div className="h-full flex flex-col justify-center">
+          <div className="h-16 md:h-20 mb-8">
+            <ParallaxText>INNOVATE • CREATE • TRANSFORM •</ParallaxText>
+          </div>
+          <div className="max-w-4xl mx-auto px-4">
             <motion.div
+              className="relative"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="space-y-8"
+              transition={{ duration: 1 }}
             >
-              {/* Get in Touch */}
-              <div>
-                <p className="text-xl mb-6">
-                  I'm always open to new opportunities and collaborations.
-                  <br /> Feel free to reach out!
+              <div className="absolute -inset-1 bg-gradient-to-r from-white/20 to-white/20 rounded-lg blur opacity-20" />
+              <div className="relative p-8 bg-black/80 backdrop-blur-sm rounded-lg">
+                <p className="text-2xl leading-relaxed text-white/90">
+                  Pioneering the intersection of AI and entrepreneurship, I
+                  transform innovative ideas into impactful solutions. Based in
+                  Turku, Finland, I collaborate with forward-thinking teams
+                  globally to shape the future of technology.
                 </p>
-                <motion.div
-                  className="relative inline-block"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                >
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur opacity-20" />
-                  <a
-                    href="mailto:riku@lauttia.com"
-                    className="relative bg-black/50 hover:bg-black/70 text-white px-6 py-3 rounded-lg inline-block transition-colors"
-                  >
-                    riku@lauttia.com
-                  </a>
-                </motion.div>
-              </div>
-
-              {/* Social Links */}
-              <div>
-                <h3 className="text-2xl font-semibold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Connect with me
-                </h3>
-                <div className="flex justify-center space-x-8">
-                  {socialLinks.map((link) => (
-                    <motion.a
-                      key={link.label}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.2, rotate: 5 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="text-white hover:text-blue-400 transition-colors"
-                      aria-label={link.label}
-                    >
-                      <link.icon size={28} />
-                    </motion.a>
-                  ))}
-                </div>
-              </div>
-
-              {/* Location */}
-              <div>
-                <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Location
-                </h3>
-                <motion.p className="text-lg" whileHover={{ scale: 1.05 }}>
-                  📍 Turku, Finland
-                </motion.p>
               </div>
             </motion.div>
           </div>
         </div>
+      </Section>
+
+      {/* Skills Section */}
+      <Section id="skills" title="Technical Expertise">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+            {skills.map((skillGroup, index) => (
+              <SkillCategory
+                key={skillGroup.category}
+                title={skillGroup.category}
+                skills={skillGroup.items}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Projects Section */}
+      <Section id="projects" title="Projects">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={project.title}
+                project={project}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Contact Section */}
+      <Section id="contact" title="Contact">
+        <ScrollReveal>
+          <div className="max-w-3xl mx-auto">
+            <div className="backdrop-blur-lg bg-white/[0.02] border border-white/[0.05] p-12 text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-12"
+              >
+                <div>
+                  <p className="text-2xl font-light mb-8 text-white/90">
+                    I'm always open to new opportunities and collaborations.
+                    <br /> Feel free to reach out!
+                  </p>
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <a
+                      href="mailto:riku@lauttia.com"
+                      className="inline-block text-xl tracking-wide text-white hover:text-white/90 transition-colors"
+                    >
+                      riku@lauttia.com
+                    </a>
+                  </motion.div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold mb-8 text-white">
+                    Connect
+                  </h3>
+                  <div className="flex justify-center space-x-10">
+                    {socialLinks.map((link) => (
+                      <motion.a
+                        key={link.label}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.2, rotate: 5 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="text-white hover:text-white/80 transition-colors"
+                        aria-label={link.label}
+                      >
+                        <link.icon size={28} />
+                      </motion.a>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-white">
+                    Location
+                  </h3>
+                  <motion.p
+                    className="text-xl text-white/90"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    Turku, Finland
+                  </motion.p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </ScrollReveal>
       </Section>
     </div>
   );
