@@ -9,7 +9,15 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { FaGithub, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import {
+  FaGithub,
+  FaGlobe,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTiktok,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 
 const HeroSection = () => {
   const { scrollY } = useScroll();
@@ -455,16 +463,39 @@ const App = () => {
 
   const socialLinks = [
     {
+      icon: FaGlobe,
+      url: "https://rikulauttia.com",
+      label: "Personal Website – Riku Lauttia",
+    },
+    {
       icon: FaLinkedinIn,
       url: "https://www.linkedin.com/in/rikulauttia",
-      label: "LinkedIn",
+      label: "LinkedIn Profile – Riku Lauttia",
     },
-    { icon: FaGithub, url: "https://github.com/rikulauttia", label: "GitHub" },
-    { icon: FaTwitter, url: "https://x.com/rikulauttia", label: "Twitter" },
+    {
+      icon: FaGithub,
+      url: "https://github.com/rikulauttia",
+      label: "GitHub – Open-source Projects by Riku Lauttia",
+    },
+    {
+      icon: FaTwitter,
+      url: "https://x.com/rikulauttia",
+      label: "Twitter (X) – Follow Riku Lauttia",
+    },
     {
       icon: FaInstagram,
       url: "https://www.instagram.com/rikulauttia/",
-      label: "Instagram",
+      label: "Instagram – Photos and Stories by Riku Lauttia",
+    },
+    {
+      icon: FaTiktok,
+      url: "https://www.tiktok.com/@rikulauttia",
+      label: "TikTok – Short Videos by Riku Lauttia",
+    },
+    {
+      icon: FaYoutube,
+      url: "https://www.youtube.com/@rikulauttia",
+      label: "YouTube – Videos by Riku Lauttia",
     },
   ];
 
