@@ -3,8 +3,6 @@ import React, { useRef, useState } from "react";
 import {
   motion,
   useInView,
-  useMotionTemplate,
-  useMotionValue,
   useScroll,
   useSpring,
   useTransform,
@@ -134,50 +132,6 @@ const ScrollReveal = ({ children, delay = 0 }) => {
         ease: [0.21, 0.45, 0.32, 0.9],
       }}
     >
-      {children}
-    </motion.div>
-  );
-};
-
-const ParallaxContainer = ({ children, speed = 0.5 }) => {
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 1000], [0, 200 * speed]);
-
-  return (
-    <motion.div style={{ y }} className="relative">
-      {children}
-    </motion.div>
-  );
-};
-
-const GlowingCard = ({ children, className }) => {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    mouseX.set(e.clientX - rect.left);
-    mouseY.set(e.clientY - rect.top);
-  };
-
-  const background = useMotionTemplate`radial-gradient(
-    circle at ${mouseX}px ${mouseY}px,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 20%,
-    rgba(255, 255, 255, 0) 50%
-  )`;
-
-  return (
-    <motion.div
-      className={`relative overflow-hidden rounded-xl ${className}`}
-      onMouseMove={handleMouseMove}
-      whileHover={{ scale: 1.02 }}
-      transition={{ duration: 0.2 }}
-    >
-      <motion.div
-        className="pointer-events-none absolute inset-0"
-        style={{ background }}
-      />
       {children}
     </motion.div>
   );
@@ -394,10 +348,6 @@ const Section = ({ id, title, children }) => (
   </section>
 );
 
-const SectionDivider = () => (
-  <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-20" />
-);
-
 const App = () => {
   const [skills] = useState([
     {
@@ -600,7 +550,7 @@ const App = () => {
                   <h3 className="text-2xl font-bold mb-8 text-white">
                     Connect
                   </h3>
-                  <div className="flex justify-center space-x-10">
+                  <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 max-w-md mx-auto">
                     {socialLinks.map((link) => (
                       <motion.a
                         key={link.label}
@@ -609,10 +559,13 @@ const App = () => {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.2, rotate: 5 }}
                         whileTap={{ scale: 0.9 }}
-                        className="text-white hover:text-white/80 transition-colors"
+                        className="text-white hover:text-white/80 transition-colors p-2"
                         aria-label={link.label}
                       >
-                        <link.icon size={28} />
+                        <link.icon
+                          size={24}
+                          className="sm:text-2xl md:text-3xl"
+                        />
                       </motion.a>
                     ))}
                   </div>
