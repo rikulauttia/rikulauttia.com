@@ -1,7 +1,4 @@
-import React, {
-  useRef,
-  useState,
-} from 'react';
+import React, { useRef, useState } from "react";
 
 import {
   motion,
@@ -9,7 +6,7 @@ import {
   useScroll,
   useSpring,
   useTransform,
-} from 'framer-motion';
+} from "framer-motion";
 import {
   FaGithub,
   FaInstagram,
@@ -17,7 +14,7 @@ import {
   FaTiktok,
   FaTwitter,
   FaYoutube,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 const HeroSection = () => {
   const { scrollY } = useScroll();
@@ -85,21 +82,15 @@ const HeroSection = () => {
               whileHover={{ scale: 1.05 }}
               className="text-white/90 relative"
             >
-              ENTREPRENEUR
+              CO-FOUNDER
               <span className="mx-3 text-white/20 hidden md:inline">|</span>
             </motion.span>
             <motion.span
               whileHover={{ scale: 1.05 }}
               className="text-white/90 relative"
             >
-              AI INNOVATOR
+              AI ENGINEER
               <span className="mx-3 text-white/20 hidden md:inline">|</span>
-            </motion.span>
-            <motion.span
-              whileHover={{ scale: 1.05 }}
-              className="text-white/90 relative"
-            >
-              FULLSTACK DEVELOPER
             </motion.span>
           </motion.div>
 
