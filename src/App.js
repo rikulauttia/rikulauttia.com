@@ -1,4 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, {
+  useRef,
+  useState,
+} from 'react';
 
 import {
   motion,
@@ -6,16 +9,15 @@ import {
   useScroll,
   useSpring,
   useTransform,
-} from "framer-motion";
+} from 'framer-motion';
 import {
   FaGithub,
-  FaGlobe,
   FaInstagram,
   FaLinkedinIn,
   FaTiktok,
   FaTwitter,
   FaYoutube,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
 const HeroSection = () => {
   const { scrollY } = useScroll();
@@ -413,11 +415,6 @@ const App = () => {
 
   const socialLinks = [
     {
-      icon: FaGlobe,
-      url: "https://rikulauttia.com",
-      label: "Personal Website – Riku Lauttia",
-    },
-    {
       icon: FaLinkedinIn,
       url: "https://www.linkedin.com/in/rikulauttia",
       label: "LinkedIn Profile – Riku Lauttia",
@@ -569,18 +566,6 @@ const App = () => {
                       </motion.a>
                     ))}
                   </div>
-                </div>
-
-                <div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">
-                    Location
-                  </h3>
-                  <motion.p
-                    className="text-xl text-white/90"
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    Turku, Finland
-                  </motion.p>
                 </div>
               </motion.div>
             </div>
