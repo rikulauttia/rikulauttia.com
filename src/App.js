@@ -113,6 +113,16 @@ const ScrollReveal = ({ children, delay = 0 }) => {
 };
 
 const ExperienceCard = ({ experience, index }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Truncate description to approximately 150 characters
+  const truncateLength = 150;
+  const shouldTruncate = experience.description.length > truncateLength;
+  const displayDescription =
+    shouldTruncate && !isExpanded
+      ? experience.description.substring(0, truncateLength) + "..."
+      : experience.description;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -164,9 +174,59 @@ const ExperienceCard = ({ experience, index }) => {
           </p>
         </div>
       </div>
-      <p className="text-white/60 leading-relaxed text-base group-hover:text-white/70 transition-colors duration-300">
-        {experience.description}
-      </p>
+
+      <div>
+        <p className="text-white/60 leading-relaxed text-base group-hover:text-white/70 transition-colors duration-300">
+          {displayDescription}
+        </p>
+
+        {shouldTruncate && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="mt-3 text-white/80 hover:text-white text-sm font-medium transition-colors duration-300 flex items-center gap-1"
+          >
+            {isExpanded ? (
+              <>
+                See less
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  className="transform rotate-180 transition-transform duration-200"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </>
+            ) : (
+              <>
+                See more
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  className="transition-transform duration-200"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </>
+            )}
+          </button>
+        )}
+      </div>
     </motion.div>
   );
 };
