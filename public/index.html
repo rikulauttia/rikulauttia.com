@@ -4,6 +4,21 @@
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      as="style"
+    />
+    <link rel="preload" href="/rikulauttia.jpg" as="image" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Icons -->
     <link
       rel="apple-touch-icon"
@@ -24,57 +39,64 @@
     />
     <link rel="manifest" href="https://rikulauttia.com/site.webmanifest" />
 
-    <!-- Basic Meta -->
+    <!-- Enhanced Meta Tags for SEO -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="author" content="Riku Lauttia" />
+    <meta name="geo.region" content="FI-02" />
+    <meta name="geo.placename" content="Turku" />
+    <meta name="geo.position" content="60.4518;22.2666" />
+    <meta name="ICBM" content="60.4518, 22.2666" />
+
     <meta
       name="keywords"
-      content="Riku Lauttia, AI, Artificial Intelligence, Entrepreneur, Fullstack Developer, Software Engineer, Technology, Innovation, GitHub, React Developer, Web Developer"
+      content="Riku Lauttia, AI Engineer, Machine Learning Expert, Co-Founder, Artificial Intelligence, Software Engineer, Technology Innovation, Teleste, Since AI, Root, Kolt, Boost Turku, Finland AI, Nordic Tech, Enterprise AI Solutions, Deep Learning, Neural Networks, Data Science, Turku AI, Finnish Technology, AI Consulting, Tech Leadership, Startup Founder, AI Research, Computer Vision, Natural Language Processing, MLOps, AI Strategy"
     />
     <meta
       name="description"
-      content="Official website of Riku Lauttia – Entrepreneur, AI Innovator, and Fullstack Developer. Discover his work, projects, and connect through social media."
+      content="Riku Lauttia - AI Engineer & Co-Founder driving innovation in artificial intelligence. Currently at Teleste R&D, co-founder of Since AI, Root, and Kolt. Based in Turku, Finland. Expert in machine learning, enterprise AI solutions, and tech leadership."
     />
     <link rel="canonical" href="https://rikulauttia.com/" />
-    <title>Riku Lauttia | AI Engineer | Co-Founder</title>
+    <title>
+      Riku Lauttia - AI Engineer & Co-Founder | Machine Learning Expert
+    </title>
 
-    <!-- Open Graph / Facebook -->
+    <!-- Enhanced Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rikulauttia.com" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fi_FI" />
     <meta
       property="og:title"
-      content="Riku Lauttia – Entrepreneur, AI Innovator, Fullstack Developer"
+      content="Riku Lauttia - AI Engineer & Co-Founder | Machine Learning Expert"
     />
     <meta
       property="og:description"
-      content="Official website of Riku Lauttia – exploring the frontiers of technology, AI, and innovation."
+      content="AI Engineer at Teleste R&D and serial co-founder of Since AI, Root, and Kolt. Driving innovation in artificial intelligence and enterprise solutions from Turku, Finland."
     />
+    <meta property="og:image" content="https://rikulauttia.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta
-      property="og:image"
-      content="https://rikulauttia.com/android-chrome-512x512.png"
+      property="og:image:alt"
+      content="Riku Lauttia - AI Engineer and Technology Innovator"
     />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
-    <meta property="og:image:alt" content="Riku Lauttia Logo" />
+    <meta property="og:site_name" content="Riku Lauttia" />
 
-    <!-- Twitter Card -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://rikulauttia.com" />
+    <!-- Enhanced Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@rikulauttia" />
+    <meta name="twitter:creator" content="@rikulauttia" />
+    <meta name="twitter:url" content="https://rikulauttia.com" />
     <meta
-      property="twitter:title"
-      content="Riku Lauttia – Entrepreneur, AI Innovator, Fullstack Developer"
+      name="twitter:title"
+      content="Riku Lauttia - AI Engineer & Co-Founder"
     />
     <meta
-      property="twitter:description"
-      content="Official website of Riku Lauttia – exploring the frontiers of technology, AI, and innovation."
+      name="twitter:description"
+      content="AI Engineer at Teleste R&D and serial co-founder driving innovation in artificial intelligence and enterprise solutions."
     />
-    <meta
-      property="twitter:image"
-      content="https://rikulauttia.com/android-chrome-512x512.png"
-    />
-    <meta name="twitter:image:alt" content="Riku Lauttia Logo" />
+    <meta name="twitter:image" content="https://rikulauttia.com/og-image.jpg" />
 
     <!-- Google Site Verification -->
     <meta
@@ -90,13 +112,59 @@
     <link rel="me" href="https://www.tiktok.com/@rikulauttia" />
     <link rel="me" href="https://www.youtube.com/@rikulauttia" />
 
-    <!-- Structured Data (JSON-LD) for Personal Branding -->
+    <!-- Enhanced Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Riku Lauttia",
         "url": "https://rikulauttia.com",
+        "image": "https://rikulauttia.com/og-image.jpg",
+        "jobTitle": "AI Engineer & Co-Founder",
+        "worksFor": [
+          {
+            "@type": "Organization",
+            "name": "Teleste",
+            "url": "https://www.teleste.com"
+          },
+          {
+            "@type": "Organization",
+            "name": "Since AI",
+            "description": "AI hackathon and innovation platform"
+          },
+          {
+            "@type": "Organization",
+            "name": "Root",
+            "description": "Nordic region's premier innovative recruiting event"
+          },
+          {
+            "@type": "Organization",
+            "name": "Kolt",
+            "description": "Automation solutions for complex operational challenges"
+          }
+        ],
+        "alumniOf": {
+          "@type": "Organization",
+          "name": "University of Turku",
+          "url": "https://www.utu.fi"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Turku",
+          "addressRegion": "Southwest Finland",
+          "addressCountry": "Finland"
+        },
+        "email": "riku@lauttia.com",
+        "knowsAbout": [
+          "Artificial Intelligence",
+          "Machine Learning",
+          "Deep Learning",
+          "Software Engineering",
+          "Enterprise AI Solutions",
+          "Technology Innovation",
+          "Startup Leadership",
+          "AI Strategy"
+        ],
         "sameAs": [
           "https://www.linkedin.com/in/rikulauttia",
           "https://github.com/rikulauttia",
@@ -105,9 +173,7 @@
           "https://www.tiktok.com/@rikulauttia",
           "https://www.youtube.com/@rikulauttia"
         ],
-        "jobTitle": "AI Engineer | Co-Founder",
-        "image": "https://rikulauttia.com/android-chrome-512x512.png",
-        "description": "Riku Lauttia is a technology entrepreneur specializing in AI."
+        "description": "AI Engineer at Teleste R&D and serial co-founder of Since AI, Root, and Kolt. Expert in artificial intelligence, machine learning, and enterprise technology solutions."
       }
     </script>
   </head>
