@@ -231,6 +231,50 @@ const ExperienceCard = ({ experience, index }) => {
   );
 };
 
+const ArticlesCard = ({ article, index }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.8,
+        delay: index * 0.1,
+        ease: [0.23, 1, 0.32, 1],
+      }}
+      className="group relative p-8 rounded-2xl backdrop-blur-xl bg-white/[0.02] border border-white/[0.08] hover:bg-white/[0.04] transition-all duration-700"
+    >
+      <h3 className="text-xl md:text-2xl font-semibold mb-4 text-white tracking-tight group-hover:text-white/90 transition-colors duration-300">
+        {article.title}
+      </h3>
+      <motion.a
+        href={article.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-300 font-medium text-sm tracking-wider uppercase"
+        whileHover={{ x: 5 }}
+      >
+        Read Article
+        <svg
+          width="16"
+          height="16"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          className="opacity-60"
+        >
+          <path
+            d="M7 17L17 7M17 7H8M17 7V16"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            fill="none"
+          />
+        </svg>
+      </motion.a>
+    </motion.div>
+  );
+};
+
 const SkillCategory = ({ title, skills, index }) => {
   return (
     <motion.div
@@ -335,28 +379,33 @@ const Navbar = () => {
         </button>
 
         <ul className="hidden md:flex space-x-8">
-          {["About", "Experience", "Skills", "Education", "Contact"].map(
-            (item, index) => (
-              <motion.li
-                key={item}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.1,
-                  ease: [0.23, 1, 0.32, 1],
-                }}
+          {[
+            "About",
+            "Experience",
+            "Skills",
+            "Education",
+            "Articles",
+            "Contact",
+          ].map((item, index) => (
+            <motion.li
+              key={item}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: [0.23, 1, 0.32, 1],
+              }}
+            >
+              <a
+                href={`#${item.toLowerCase()}`}
+                className="text-white/70 hover:text-white transition-colors duration-300 font-medium text-base tracking-wide relative group"
               >
-                <a
-                  href={`#${item.toLowerCase()}`}
-                  className="text-white/70 hover:text-white transition-colors duration-300 font-medium text-base tracking-wide relative group"
-                >
-                  {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full" />
-                </a>
-              </motion.li>
-            )
-          )}
+                {item}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full" />
+              </a>
+            </motion.li>
+          ))}
         </ul>
 
         <motion.div
@@ -368,19 +417,24 @@ const Navbar = () => {
           transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
         >
           <ul className="py-6">
-            {["About", "Experience", "Skills", "Education", "Contact"].map(
-              (item) => (
-                <li key={item} className="px-6 py-3">
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className="block text-lg text-white/70 hover:text-white transition-colors duration-300 font-medium"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item}
-                  </a>
-                </li>
-              )
-            )}
+            {[
+              "About",
+              "Experience",
+              "Skills",
+              "Education",
+              "Articles",
+              "Contact",
+            ].map((item) => (
+              <li key={item} className="px-6 py-3">
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="block text-lg text-white/70 hover:text-white transition-colors duration-300 font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
           </ul>
         </motion.div>
       </nav>
@@ -445,6 +499,19 @@ const App = () => {
       description:
         "Leading AI innovation initiatives and securing long-term strategic partnerships with FAANG companies and global technology leaders. Spearheading the organization of AI hackathon, designed to attract top-tier talent and create transformative AI solutions. Establishing Boost Turku as a key player in the European AI landscape through innovative program development and strategic partnership cultivation with industry pioneers.",
       url: "https://www.boostturku.com/",
+    },
+  ];
+
+  const articles = [
+    {
+      title:
+        "From San Francisco to Europe: The 2025 Playbook for Building Agentic AI That Scales",
+      url: "https://rikulauttia.substack.com/p/from-san-francisco-to-europe-the",
+    },
+    {
+      title:
+        "Europe Must Stay Hungry: Why the Next Decade of AI Will Be Decided Here",
+      url: "https://rikulauttia.substack.com/p/europe-must-stay-hungry",
     },
   ];
 
@@ -712,6 +779,15 @@ const App = () => {
               </div>
             </motion.div>
           </ScrollReveal>
+        </div>
+      </Section>
+
+      {/* Articles Section */}
+      <Section id="articles" title="Read more by Riku" className="bg-black/50">
+        <div className="space-y-8">
+          {articles.map((article, index) => (
+            <ArticlesCard key={index} article={article} index={index} />
+          ))}
         </div>
       </Section>
 
