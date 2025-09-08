@@ -1,5 +1,8 @@
 /* App.js */
-import React, { useRef, useState } from "react";
+import React, {
+  useRef,
+  useState,
+} from 'react';
 
 import {
   motion,
@@ -7,8 +10,12 @@ import {
   useScroll,
   useSpring,
   useTransform,
-} from "framer-motion";
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+} from 'framer-motion';
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaTwitter,
+} from 'react-icons/fa';
 
 const HeroSection = () => {
   const { scrollY } = useScroll();
@@ -503,6 +510,11 @@ const App = () => {
   ];
 
   const articles = [
+    {
+      title:
+        "AI at the Edge: Why Hardware and Embedded AI Will Decide the Next Decade",
+      url: "https://rikulauttia.substack.com/p/ai-at-the-edge-why-hardware-and-embedded",
+    },
     {
       title:
         "From San Francisco to Europe: The 2025 Playbook for Building Agentic AI That Scales",
