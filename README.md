@@ -48,7 +48,11 @@ npm start
 
 ## Contact
 
+- Website: [rikulauttia.com](https://rikulauttia.com)
 - Email: [riku@lauttia.com](mailto:riku@lauttia.com)
 - LinkedIn: [linkedin.com/in/rikulauttia](https://linkedin.com/in/rikulauttia)
 - GitHub: [@rikulauttia](https://github.com/rikulauttia)
-- Twitter: [@rikulauttia](https://x.com/rikulauttia)
+- X (Twitter): [@rikulauttia](https://x.com/rikulauttia)
+- Substack: [@rikulauttia](https://substack.com/@rikulauttia)
+- Facebook: [/rikulauttia](https://www.facebook.com/rikulauttia/)
+- Instagram: [@rikulauttia](https://www.instagram.com/rikulauttia/)

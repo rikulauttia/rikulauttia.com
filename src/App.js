@@ -12,10 +12,13 @@ import {
   useTransform,
 } from 'framer-motion';
 import {
+  FaFacebookF,
   FaGithub,
+  FaInstagram,
   FaLinkedinIn,
   FaTwitter,
 } from 'react-icons/fa';
+import { SiSubstack } from 'react-icons/si';
 
 const HeroSection = () => {
   const { scrollY } = useScroll();
@@ -579,6 +582,9 @@ const App = () => {
       url: "https://x.com/rikulauttia",
       label: "X (Twitter) Profile",
     },
+    { icon: FaFacebookF,   url: "https://www.facebook.com/rikulauttia/",     label: "Facebook Profile" },
+    { icon: SiSubstack,    url: "https://substack.com/@rikulauttia",         label: "Substack" },
+    { icon: FaInstagram,   url: "https://www.instagram.com/rikulauttia/",    label: "Instagram" },
   ];
 
   return (
