@@ -471,7 +471,7 @@ const Section = ({ id, title, children, className = "" }) => (
 const App = () => {
   const experiences = [
     {
-      role: "Software Engineer (R&D)",
+      role: "Software Engineer",
       company: "Teleste",
       period: "April 2025 - Present",
       description:
@@ -503,7 +503,7 @@ const App = () => {
       url: "https://kolt.fi/",
     },
     {
-      role: "AI & Innovation Lead",
+      role: "AI Lead",
       company: "Boost",
       period: "April 2025 - Present",
       description:
