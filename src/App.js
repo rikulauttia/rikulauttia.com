@@ -518,6 +518,9 @@ const App = () => {
         "AI at the Edge: Why Hardware and Embedded AI Will Decide the Next Decade",
       url: "https://rikulauttia.substack.com/p/ai-at-the-edge-why-hardware-and-embedded",
     },
+    {title: "A Social Contract for AI",
+      url: "https://rikulauttia.substack.com/p/a-social-contract-for-ai",
+    },
     {
       title:
         "From San Francisco to Europe: The 2025 Playbook for Building Agentic AI That Scales",
