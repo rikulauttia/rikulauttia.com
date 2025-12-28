@@ -515,6 +515,11 @@ const App = () => {
   const articles = [
     {
       title:
+        "Selling AI Without the Hype: A Playbook for Turning Interest Into Partnerships",
+      url: "https://open.substack.com/pub/rikulauttia/p/selling-ai-without-the-hype-a-playbook",
+    },
+    {
+      title:
         "AI at the Edge: Why Hardware and Embedded AI Will Decide the Next Decade",
       url: "https://rikulauttia.substack.com/p/ai-at-the-edge-why-hardware-and-embedded",
     },
