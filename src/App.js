@@ -473,7 +473,7 @@ const App = () => {
     {
       role: "Software Engineer",
       company: "Teleste",
-      period: "April 2025 - Present",
+      period: "April 2025 - Present · 10 mos",
       description:
         "Contributing to Teleste's broadband R&D team, driving practical improvements that enhance product performance, reliability, and deployment efficiency across our access-network solutions. Development of scalable software components and optimized caching systems that significantly reduce configuration latency for enterprise customers. Building comprehensive testing frameworks and automated quality assurance processes that ensure robust product delivery while accelerating development cycles. Contributing to CI/CD pipeline optimization and implementing advanced debugging methodologies to support critical field trials and customer demonstrations. Focused on delivering clean, maintainable solutions that enable superior broadband experiences for millions of end users worldwide.",
       url: "https://www.teleste.com",
@@ -481,7 +481,7 @@ const App = () => {
     {
       role: "Co-Founder",
       company: "Since AI",
-      period: "May 2025 - Present",
+      period: "January 2025 - Present · 1 yr 1 mo",
       description:
         "Leading strategic partnerships and business development for Since AI, an innovative AI hackathon. Spearheading collaboration opportunities with global technology leaders and driving community engagement in the rapidly evolving AI ecosystem. Positioning Since AI as Northern Europe's premier AI innovation platform through strategic partnership development and cutting-edge program design focused on practical AI advancement.",
       url: "https://sinceai.fi/",
@@ -489,7 +489,7 @@ const App = () => {
     {
       role: "Co-Founder",
       company: "Root",
-      period: "March 2025 - Present",
+      period: "January 2025 - Present · 1 yr 1 mo",
       description:
         "Co-founded Root, the Nordic region's premier innovative recruiting event connecting top talent with Europe's leading technology companies. Built strategic relationships with Nordic's biggest IT companies and featured Europe's most influential IT career speakers, creating unprecedented networking opportunities for 1000+ participants establishing Root as the definitive platform for elite tech talent acquisition and career advancement.",
       url: "https://rootexpo.fi/",
@@ -497,18 +497,34 @@ const App = () => {
     {
       role: "Co-Founder",
       company: "Kolt",
-      period: "July 2024 - Present",
+      period: "July 2024 - Present · 1 yr 7 mos",
       description:
         "Co-founded Kolt to develop innovative automation solutions addressing complex operational challenges through advanced technology integration. Leading comprehensive product development across multiple technical domains, building robust platforms designed for mission-critical applications. Spearheading architectural decisions and technical implementation strategies that enable autonomous operation, real-time data processing, and seamless remote management capabilities. Designing scalable backend infrastructure with secure connectivity and dynamic APIs to support sophisticated user interfaces and operational dashboards. Directing early-stage R&D initiatives, technology evaluation, and systems integration to ensure optimal performance under demanding operational requirements. Collaborating with multidisciplinary teams to accelerate product development cycles, validate market opportunities, and establish strategic direction for scalable deployment across diverse environments.",
       url: "https://kolt.fi/",
     },
     {
-      role: "AI Lead",
-      company: "Boost",
-      period: "April 2025 - Present",
+      role: "Co-Founder",
+      company: "Attractor",
+      period: "October 2025 - Present · 4 mos",
       description:
-        "Leading AI innovation initiatives and securing long-term strategic partnerships with FAANG companies and global technology leaders. Spearheading the organization of AI hackathon, designed to attract top-tier talent and create transformative AI solutions. Establishing Boost Turku as a key player in the European AI landscape through innovative program development and strategic partnership cultivation with industry pioneers.",
+        "Co-Founder at Attractor, a technology consultancy building production-grade software, applied AI, and security-first systems. Operating at the intersection of commercial execution and technical delivery — owning client discovery, scoping, proposals, and partnerships, while also contributing hands-on to AI implementation and solution architecture. Helping teams turn unclear goals into shipped outcomes: define the metric, design the workflow, integrate AI where it creates measurable value, and ensure reliability in production. Typical work includes packaging service offerings, building go-to-market materials, running technical workshops, and supporting delivery with prototypes, evaluations, and integrations.",
+      url: "https://attractor.fi/",
+    },
+    {
+      role: "Partnerships Lead",
+      company: "Boost Turku",
+      period: "January 2025 - December 2025 · 1 yr",
+      description:
+        "Led AI innovation initiatives and secured long-term strategic partnerships with global technology leaders. Spearheaded the organization of an AI hackathon designed to attract top-tier talent and create transformative AI solutions. Established Boost Turku as a key player in the European AI landscape through innovative program development and strategic partnership cultivation with industry pioneers.",
       url: "https://www.boostturku.com/",
+    },
+    {
+      role: "Technical Solutions Specialist",
+      company: "VSP",
+      period: "January 2023 - May 2023 · 5 mos",
+      description:
+        "Delivered exceptional technical problem-solving across diverse customer environments, developing advanced analytical capabilities and communication excellence. Optimized support processes through innovative solutions, significantly enhancing customer experience and operational efficiency. Built foundation for scalable technical leadership through systematic approach to complex problem resolution and cross-functional collaboration.",
+      url: "https://vsp.fi/",
     },
   ];
 
