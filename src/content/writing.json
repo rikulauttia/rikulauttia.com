@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Writing & Articles",
+  "description": "Published articles, blog posts, and thought leadership content",
+  "type": "array",
+  "articles": [
+    {
+      "id": "selling-ai-without-hype",
+      "title": "Selling AI Without the Hype: A Playbook for Turning Interest Into Partnerships",
+      "slug": "selling-ai-without-the-hype-a-playbook",
+      "excerpt": "TODO",
+      "url": "https://open.substack.com/pub/rikulauttia/p/selling-ai-without-the-hype-a-playbook",
+      "platform": "Substack",
+      "publishedDate": "TODO",
+      "featured": true,
+      "category": "AI Strategy",
+      "tags": [
+        "AI",
+        "Sales",
+        "Partnerships",
+        "Business Development"
+      ],
+      "readingTime": "TODO",
+      "image": "TODO"
+    },
+    {
+      "id": "ai-at-the-edge",
+      "title": "AI at the Edge: Why Hardware and Embedded AI Will Decide the Next Decade",
+      "slug": "ai-at-the-edge-why-hardware-and-embedded",
+      "excerpt": "TODO",
+      "url": "https://rikulauttia.substack.com/p/ai-at-the-edge-why-hardware-and-embedded",
+      "platform": "Substack",
+      "publishedDate": "TODO",
+      "featured": true,
+      "category": "AI Technology",
+      "tags": [
+        "AI",
+        "Edge Computing",
+        "Hardware",
+        "Embedded Systems"
+      ],
+      "readingTime": "TODO",
+      "image": "TODO"
+    },
+    {
+      "id": "social-contract-ai",
+      "title": "A Social Contract for AI",
+      "slug": "a-social-contract-for-ai",
+      "excerpt": "TODO",
+      "url": "https://rikulauttia.substack.com/p/a-social-contract-for-ai",
+      "platform": "Substack",
+      "publishedDate": "TODO",
+      "featured": false,
+      "category": "AI Ethics",
+      "tags": [
+        "AI",
+        "Ethics",
+        "Society",
+        "Policy"
+      ],
+      "readingTime": "TODO",
+      "image": "TODO"
+    },
+    {
+      "id": "sf-to-europe-agentic-ai",
+      "title": "From San Francisco to Europe: The 2025 Playbook for Building Agentic AI That Scales",
+      "slug": "from-san-francisco-to-europe-the",
+      "excerpt": "TODO",
+      "url": "https://rikulauttia.substack.com/p/from-san-francisco-to-europe-the",
+      "platform": "Substack",
+      "publishedDate": "TODO",
+      "featured": true,
+      "category": "AI Development",
+      "tags": [
+        "AI",
+        "Agentic AI",
+        "Europe",
+        "Scaling"
+      ],
+      "readingTime": "TODO",
+      "image": "TODO"
+    },
+    {
+      "id": "europe-must-stay-hungry",
+      "title": "Europe Must Stay Hungry: Why the Next Decade of AI Will Be Decided Here",
+      "slug": "europe-must-stay-hungry",
+      "excerpt": "TODO",
+      "url": "https://rikulauttia.substack.com/p/europe-must-stay-hungry",
+      "platform": "Substack",
+      "publishedDate": "TODO",
+      "featured": false,
+      "category": "AI Strategy",
+      "tags": [
+        "AI",
+        "Europe",
+        "Innovation",
+        "Strategy"
+      ],
+      "readingTime": "TODO",
+      "image": "TODO"
+    }
+  ]
+}

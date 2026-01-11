@@ -1,0 +1,81 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background with subtle gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Subtle accent gradient -->
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.05);stop-opacity:1" />
+      <stop offset="50%" style="stop-color:rgba(255,255,255,0.15);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0.05);stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Noise texture filter -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-gradient)"/>
+
+  <!-- Noise overlay -->
+  <rect width="1200" height="630" filter="url(#noise)" opacity="0.015"/>
+
+  <!-- Subtle geometric accent -->
+  <circle cx="1100" cy="100" r="300" fill="url(#accent-gradient)" opacity="0.03"/>
+  <circle cx="100" cy="530" r="200" fill="url(#accent-gradient)" opacity="0.03"/>
+
+  <!-- Decorative line -->
+  <line x1="80" y1="315" x2="240" y2="315" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Content Container -->
+  <g transform="translate(80, 200)">
+
+    <!-- Main name -->
+    <text
+      x="0"
+      y="0"
+      font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"
+      font-size="88"
+      font-weight="600"
+      fill="#ffffff"
+      letter-spacing="-2">
+      Riku Lauttia
+    </text>
+
+    <!-- Title/Role -->
+    <text
+      x="0"
+      y="80"
+      font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"
+      font-size="42"
+      font-weight="500"
+      fill="rgba(255,255,255,0.8)"
+      letter-spacing="-0.5">
+      AI Engineer · Co-Founder
+    </text>
+
+    <!-- Domain/Website -->
+    <text
+      x="0"
+      y="160"
+      font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"
+      font-size="28"
+      font-weight="400"
+      fill="rgba(255,255,255,0.5)"
+      letter-spacing="0">
+      rikulauttia.com
+    </text>
+
+  </g>
+
+  <!-- Bottom accent line -->
+  <line x1="80" y1="550" x2="1120" y2="550" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+</svg>

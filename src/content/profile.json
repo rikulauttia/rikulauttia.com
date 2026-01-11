@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Profile",
+  "description": "Personal profile information for Riku Lauttia",
+  "type": "object",
+  "personal": {
+    "name": "Riku Lauttia",
+    "tagline": "AI Engineer & Co-Founder",
+    "bio": "AI Engineer and serial co-founder based in Turku, Finland. I build production AI systems and companies.",
+    "bioLong": "I'm an AI Engineer and serial co-founder based in Turku, Finland. I build production AI systems and companies. At Teleste, I develop scalable software components for broadband R&D. Built caching systems that reduced configuration latency. Created testing frameworks for enterprise deployments. Systems serve millions of broadband users globally. Co-founded four companies: Since AI (AI hackathons), Root (recruiting events), Kolt (automation), and Attractor (consultancy). 1000+ participants across events. Strategic partnerships with Nordic tech leaders. I combine technical implementation with business execution. Focus on shipping production systems that deliver measurable value.",
+    "email": "riku@lauttia.com",
+    "location": {
+      "city": "Turku",
+      "region": "Southwest Finland",
+      "country": "Finland",
+      "countryCode": "FI"
+    },
+    "availability": {
+      "status": "available",
+      "forConsulting": true,
+      "forPartnerships": true,
+      "message": "Available for AI consulting, strategic partnerships, and production implementations."
+    }
+  },
+  "education": [
+    {
+      "institution": "University of Turku",
+      "degree": "Information and Communication Technology",
+      "field": "TODO",
+      "startDate": "TODO",
+      "endDate": "TODO",
+      "url": "https://www.utu.fi",
+      "thesis": {
+        "title": "The Role of Artificial Intelligence in Analyzing Large Datasets and Its Utilization in Commercial Decision-Making",
+        "url": "https://github.com/rikulauttia/AI-Commercial-DecisionMaking"
+      }
+    },
+    {
+      "institution": "VSP",
+      "degree": "TODO",
+      "field": "TODO",
+      "startDate": "TODO",
+      "endDate": "TODO",
+      "url": "https://vsp.fi"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "date": "March 2025",
+      "credentialUrl": "https://www.credly.com/badges/28a5319a-2126-42fd-b607-5c6772c7745e/public_url"
+    },
+    {
+      "name": "Full Stack Open",
+      "issuer": "University of Helsinki",
+      "date": "November 2024",
+      "credentialUrl": "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/cb1bea9373697a44f69e6f7a20726896"
+    }
+  ],
+  "skills": {
+    "categories": [
+      {
+        "name": "Artificial Intelligence",
+        "skills": [
+          "Machine Learning",
+          "Deep Learning",
+          "Neural Networks",
+          "Computer Vision",
+          "Natural Language Processing",
+          "MLOps & AI Strategy"
+        ]
+      },
+      {
+        "name": "Software Engineering",
+        "skills": [
+          "Python, C++ & JavaScript",
+          "React & Full-Stack Development",
+          "Cloud Infrastructure (AWS)",
+          "Microservices Architecture",
+          "DevOps & CI/CD",
+          "System Design"
+        ]
+      },
+      {
+        "name": "Leadership & Strategy",
+        "skills": [
+          "Startup Co-Founding",
+          "Strategic Partnerships",
+          "Business Development",
+          "Technology Innovation",
+          "Team Leadership",
+          "Product Strategy"
+        ]
+      }
+    ]
+  },
+  "social": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/rikulauttia",
+      "username": "rikulauttia"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/rikulauttia",
+      "username": "rikulauttia"
+    },
+    {
+      "platform": "X (Twitter)",
+      "url": "https://x.com/rikulauttia",
+      "username": "rikulauttia"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://www.facebook.com/rikulauttia/",
+      "username": "rikulauttia"
+    },
+    {
+      "platform": "Substack",
+      "url": "https://substack.com/@rikulauttia",
+      "username": "rikulauttia"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/rikulauttia/",
+      "username": "rikulauttia"
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@rikulauttia",
+      "username": "rikulauttia"
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/@rikulauttia",
+      "username": "rikulauttia"
+    },
+    {
+      "platform": "Medium",
+      "url": "https://medium.com/@rikulauttia",
+      "username": "rikulauttia"
+    }
+  ],
+  "meta": {
+    "seo": {
+      "title": "Riku Lauttia | AI Engineer & Co-Founder",
+      "description": "AI Engineer and serial co-founder of Since AI, Root, Kolt, and Attractor. Building production AI systems and companies in Turku, Finland.",
+      "keywords": [
+        "AI Engineer",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Co-Founder",
+        "Startup",
+        "Technology Innovation",
+        "Turku",
+        "Finland"
+      ]
+    },
+    "lastUpdated": "2026-01-11"
+  }
+}

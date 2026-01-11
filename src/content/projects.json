@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Projects & Ventures",
+  "description": "Portfolio of projects, ventures, and initiatives",
+  "type": "array",
+  "projects": [
+    {
+      "id": "since-ai",
+      "name": "Since AI",
+      "tagline": "Northern Europe's premier AI innovation platform and hackathon",
+      "description": "Northern Europe's premier AI innovation platform and hackathon",
+      "longDescription": "Since AI is an innovative AI hackathon and innovation platform positioning itself as Northern Europe's premier destination for AI advancement. Through strategic partnerships with global technology leaders and cutting-edge program design, Since AI drives community engagement and practical AI innovation across the Nordic region.",
+      "url": "https://sinceai.fi/",
+      "role": "Co-Founder",
+      "status": "active",
+      "featured": true,
+      "startDate": "2025-01",
+      "endDate": null,
+      "category": "AI Innovation",
+      "technologies": [
+        "AI/ML",
+        "Event Platform",
+        "Community Building"
+      ],
+      "highlights": [
+        "Northern Europe's premier AI innovation platform",
+        "Strategic partnerships with global technology leaders",
+        "Community-driven AI advancement",
+        "Cutting-edge hackathon programs"
+      ],
+      "metrics": {
+        "participants": "TODO",
+        "events": "TODO",
+        "partnerships": "TODO"
+      },
+      "image": "TODO",
+      "links": [
+        {
+          "type": "website",
+          "url": "https://sinceai.fi/"
+        }
+      ]
+    },
+    {
+      "id": "root",
+      "name": "Root",
+      "tagline": "Nordic region's premier innovative recruiting event",
+      "description": "Nordic region's premier innovative recruiting event",
+      "longDescription": "Root is the Nordic region's premier innovative recruiting event connecting top talent with Europe's leading technology companies. With strategic relationships across Nordic's biggest IT companies and Europe's most influential IT career speakers, Root creates unprecedented networking opportunities for 1000+ participants.",
+      "url": "https://rootexpo.fi/",
+      "role": "Co-Founder",
+      "status": "active",
+      "featured": true,
+      "startDate": "2025-01",
+      "endDate": null,
+      "category": "Recruiting & Talent",
+      "technologies": [
+        "Event Platform",
+        "Networking"
+      ],
+      "highlights": [
+        "Nordic's premier recruiting event",
+        "1000+ participants",
+        "Europe's top IT career speakers",
+        "Strategic IT company partnerships"
+      ],
+      "metrics": {
+        "participants": "1000+",
+        "companies": "TODO",
+        "speakers": "TODO"
+      },
+      "image": "TODO",
+      "links": [
+        {
+          "type": "website",
+          "url": "https://rootexpo.fi/"
+        }
+      ]
+    },
+    {
+      "id": "kolt",
+      "name": "Kolt",
+      "tagline": "Automation solutions for complex operational challenges",
+      "description": "Automation solutions for complex operational challenges",
+      "longDescription": "Kolt develops innovative automation solutions addressing complex operational challenges through advanced technology integration. Building robust platforms designed for mission-critical applications with autonomous operation, real-time data processing, and seamless remote management capabilities.",
+      "url": "https://kolt.fi/",
+      "role": "Co-Founder",
+      "status": "active",
+      "featured": true,
+      "startDate": "2024-07",
+      "endDate": null,
+      "category": "Automation & IoT",
+      "technologies": [
+        "Automation",
+        "Real-time Processing",
+        "Remote Management",
+        "Scalable Backend",
+        "Dynamic APIs"
+      ],
+      "highlights": [
+        "Mission-critical automation solutions",
+        "Autonomous operation capabilities",
+        "Real-time data processing",
+        "Scalable backend infrastructure"
+      ],
+      "metrics": {
+        "deployments": "TODO",
+        "uptime": "TODO"
+      },
+      "image": "TODO",
+      "links": [
+        {
+          "type": "website",
+          "url": "https://kolt.fi/"
+        }
+      ]
+    },
+    {
+      "id": "attractor",
+      "name": "Attractor",
+      "tagline": "Technology consultancy building production-grade software and AI systems",
+      "description": "Technology consultancy building production-grade software and AI systems",
+      "longDescription": "Attractor is a technology consultancy building production-grade software, applied AI, and security-first systems. Operating at the intersection of commercial execution and technical delivery, helping teams turn unclear goals into shipped outcomes through practical AI integration and solution architecture.",
+      "url": "https://attractor.fi/",
+      "role": "Co-Founder",
+      "status": "active",
+      "featured": true,
+      "startDate": "2025-10",
+      "endDate": null,
+      "category": "Consulting & Services",
+      "technologies": [
+        "AI/ML",
+        "Production Software",
+        "Security Systems",
+        "Solution Architecture"
+      ],
+      "highlights": [
+        "Production-grade software and AI systems",
+        "Client discovery and scoping",
+        "Solution architecture",
+        "Go-to-market strategy"
+      ],
+      "metrics": {
+        "clients": "TODO",
+        "projects": "TODO"
+      },
+      "image": "TODO",
+      "links": [
+        {
+          "type": "website",
+          "url": "https://attractor.fi/"
+        }
+      ]
+    }
+  ]
+}
