@@ -208,10 +208,9 @@ export default function About() {
                   I studied Information and Communication Technology at the
                   University of Turku, where I wrote my thesis on "The Role of
                   Artificial Intelligence in Analyzing Large Datasets and Its
-                  Utilization in Commercial Decision-Making." I also attended VSP
-                  and hold certifications including AWS Certified Cloud
-                  Practitioner (March 2025) and Full Stack Open from the
-                  University of Helsinki (November 2024).
+                  Utilization in Commercial Decision-Making." I hold certifications
+                  including AWS Certified Cloud Practitioner (March 2025) and
+                  Full Stack Open from the University of Helsinki (November 2024).
                 </p>
               </Card>
 
