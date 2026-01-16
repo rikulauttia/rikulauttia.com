@@ -34,7 +34,7 @@ export default function Contact() {
         breadcrumbs={getBreadcrumbs('/contact', 'Contact')}
       />
 
-      <Section className="pt-32 pb-16">
+      <Section className="min-h-[calc(100vh-5rem)] flex items-center justify-center py-12 md:py-16">
         <Container size="sm">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -42,15 +42,15 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-8 md:mb-12">
               Get in Touch
             </h1>
 
             {/* Email */}
-            <div className="mb-12">
+            <div className="mb-8 md:mb-12">
               <a
                 href="mailto:riku@lauttia.com"
-                className="inline-flex items-center gap-3 px-6 py-4 bg-dark-800 border border-dark-700 rounded-lg hover:bg-dark-700 hover:border-accent-400 text-dark-50 hover:text-accent-400 transition-all text-lg font-medium"
+                className="inline-flex items-center gap-3 px-6 py-4 min-h-[60px] bg-dark-800 border border-dark-700 rounded-lg hover:bg-dark-700 hover:border-accent-400 text-dark-50 hover:text-accent-400 transition-all text-base md:text-lg font-medium"
               >
                 <FiMail className="w-6 h-6" />
                 riku@lauttia.com
@@ -58,18 +58,18 @@ export default function Contact() {
             </div>
 
             {/* Social Links */}
-            <div className="pt-8 border-t border-dark-700">
-              <h2 className="text-xl font-semibold text-dark-50 mb-6">
+            <div className="pt-6 md:pt-8 border-t border-dark-700">
+              <h2 className="text-lg md:text-xl font-semibold text-dark-50 mb-6">
                 Connect
               </h2>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-3 md:gap-4">
                 {socialLinks.map((link) => (
                   <a
                     key={link.platform}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-dark-800 border border-dark-700 rounded-lg hover:bg-dark-700 hover:border-accent-400 text-dark-200 hover:text-accent-400 transition-all"
+                    className="flex items-center gap-2 px-4 py-3 min-h-[48px] bg-dark-800 border border-dark-700 rounded-lg hover:bg-dark-700 hover:border-accent-400 text-dark-200 hover:text-accent-400 transition-all"
                     aria-label={link.platform}
                   >
                     {getSocialIcon(link.platform)}

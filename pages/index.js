@@ -46,16 +46,16 @@ const HomePage = () => {
       <SEO jsonLd={getPersonSchema(profileData.personal)} />
 
       {/* Hero Section - Above the Fold */}
-      <Section size="lg" className="min-h-[calc(100vh-5rem)] flex items-center">
+      <Section size="lg" className="min-h-[calc(100vh-5rem)] flex items-center justify-center py-16 md:py-20 lg:py-24">
         <Container>
           <motion.div
             variants={container}
             initial="hidden"
             animate="show"
-            className="max-w-4xl"
+            className="max-w-5xl mx-auto"
           >
             {/* Badge */}
-            <motion.div variants={item} className="mb-8">
+            <motion.div variants={item} className="mb-8 lg:mb-10">
               <Badge variant="accent">
                 {profile.availability.forConsulting ? 'Available for consulting' : 'Currently unavailable'}
               </Badge>
@@ -64,7 +64,7 @@ const HomePage = () => {
             {/* Main Heading */}
             <motion.h1
               variants={item}
-              className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 leading-[1.1]"
+              className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight mb-8 lg:mb-12 leading-[1.05]"
             >
               <span className="gradient-text">
                 AI engineer.
@@ -76,7 +76,7 @@ const HomePage = () => {
             {/* Subheading */}
             <motion.p
               variants={item}
-              className="text-xl md:text-2xl text-dark-300 leading-relaxed mb-12 max-w-2xl"
+              className="text-xl md:text-2xl lg:text-3xl text-dark-300 leading-relaxed mb-12 lg:mb-16 max-w-3xl"
             >
               I build production AI systems at Teleste, serving millions of broadband customers.
               <br />
@@ -86,7 +86,7 @@ const HomePage = () => {
             {/* CTA Buttons */}
             <motion.div
               variants={item}
-              className="flex flex-wrap items-center gap-4 mb-16"
+              className="flex flex-wrap items-center gap-4 lg:gap-6 mb-16 lg:mb-20"
             >
               <Button href="/work" size="lg">
                 View My Work
@@ -100,31 +100,31 @@ const HomePage = () => {
             {/* Social Proof / Stats */}
             <motion.div
               variants={item}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-dark-800"
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 pt-8 lg:pt-12 border-t border-dark-800"
             >
               <div>
-                <div className="text-3xl md:text-4xl font-semibold text-dark-50 mb-1">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-semibold text-dark-50 mb-2">
                   4+
                 </div>
-                <div className="text-sm text-dark-400">Companies Founded</div>
+                <div className="text-sm lg:text-base text-dark-400">Companies Founded</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-semibold text-dark-50 mb-1">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-semibold text-dark-50 mb-2">
                   5+
                 </div>
-                <div className="text-sm text-dark-400">Years Experience</div>
+                <div className="text-sm lg:text-base text-dark-400">Years Experience</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-semibold text-dark-50 mb-1">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-semibold text-dark-50 mb-2">
                   AI/ML
                 </div>
-                <div className="text-sm text-dark-400">Specialization</div>
+                <div className="text-sm lg:text-base text-dark-400">Specialization</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-semibold text-dark-50 mb-1">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-semibold text-dark-50 mb-2">
                   {profile.location.city}
                 </div>
-                <div className="text-sm text-dark-400">Based in {profile.location.country}</div>
+                <div className="text-sm lg:text-base text-dark-400">Based in {profile.location.country}</div>
               </div>
             </motion.div>
           </motion.div>
