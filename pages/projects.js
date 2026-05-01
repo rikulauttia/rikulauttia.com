@@ -10,36 +10,33 @@ export default function Projects() {
   return (
     <Layout>
       <SEO
-        title="Projects | Riku Lauttia"
-        description="Explore my ventures: Since AI, Root, Kolt, and Attractor - driving innovation in AI, recruiting, automation, and technology consulting."
+        title="Projects — Riku Lauttia"
+        description="Companies, systems, and communities built across AI, software, automation, and technology consulting."
         canonical="https://rikulauttia.com/projects"
-        breadcrumbs={getBreadcrumbs('/projects', 'Projects & Ventures')}
+        breadcrumbs={getBreadcrumbs('/projects', 'Projects')}
       />
 
-      {/* Hero */}
-      <Section className="pt-32 pb-16">
+      <Section className="pt-24 pb-8 md:pt-28 md:pb-10">
         <Container size="default">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.45 }}
             className="max-w-3xl"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-              Projects & Ventures
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 text-dark-50">
+              Projects
             </h1>
-            <p className="text-xl md:text-2xl text-dark-300 leading-relaxed">
-              Building companies and platforms that push the boundaries of AI,
-              technology, and innovation across the Nordic region.
+            <p className="text-dark-500 text-[15px]">
+              Companies, systems, and communities built across AI, software, and automation.
             </p>
           </motion.div>
         </Container>
       </Section>
 
-      {/* Projects Grid */}
       <Section>
         <Container size="default">
-          <div className="space-y-6">
+          <div className="space-y-3">
             {projects.map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}
@@ -47,27 +44,22 @@ export default function Projects() {
         </Container>
       </Section>
 
-      {/* Tagline */}
-      <Section className="bg-dark-900/30">
-        <Container size="sm">
+      <Section>
+        <Container size="default">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
+            transition={{ duration: 0.4 }}
           >
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-              Interested in collaboration?
-            </h2>
-            <p className="text-lg text-dark-400 mb-8">
-              Always open to discussing new opportunities and partnerships
+            <p className="text-dark-500 text-sm mb-5">
+              For AI systems, software, partnerships, or company-building discussions, reach out directly.
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center px-8 py-3.5 bg-dark-50 text-dark-950 rounded-lg font-medium hover:bg-dark-100 transition-all"
+              className="inline-flex items-center min-h-[44px] px-5 py-2.5 bg-dark-50 text-dark-950 rounded-lg text-sm font-medium hover:bg-dark-200 active:bg-dark-300 transition-colors"
             >
-              Start a Conversation
+              Contact
             </a>
           </motion.div>
         </Container>

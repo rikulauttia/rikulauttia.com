@@ -1,334 +1,225 @@
 import { motion } from 'framer-motion';
-import { FiArrowRight, FiExternalLink, FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
+import { FiArrowRight, FiExternalLink } from 'react-icons/fi';
 import Layout from '../components/layout/Layout';
 import Container from '../components/layout/Container';
 import Section from '../components/layout/Section';
 import Button from '../components/ui/Button';
-import Badge from '../components/ui/Badge';
 import SEO, { getPersonSchema } from '../components/SEO';
-import { getProfile, getFeaturedProjects, getFeaturedArticles, getSocialLinks } from '../src/lib/content';
+import { getProfile, getFeaturedProjects, getFeaturedArticles } from '../src/lib/content';
 import profileData from '../src/content/profile.json';
 
 const HomePage = () => {
   const profile = getProfile();
   const featuredProjects = getFeaturedProjects();
   const featuredArticles = getFeaturedArticles();
-  const socialLinks = getSocialLinks();
-
-  // Icon mapping for social platforms
-  const getIcon = (platform) => {
-    const icons = {
-      'GitHub': FiGithub,
-      'LinkedIn': FiLinkedin,
-      'X (Twitter)': FiTwitter,
-    };
-    return icons[platform] || FiExternalLink;
-  };
 
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.08, delayChildren: 0.1 },
     },
   };
 
   const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 14 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.25, 0.1, 0.25, 1] } },
   };
 
   return (
     <Layout>
       <SEO jsonLd={getPersonSchema(profileData.personal)} />
 
-      {/* Hero Section - Above the Fold */}
-      <Section size="lg" className="min-h-[calc(100vh-5rem)] flex items-center justify-center py-16 md:py-20 lg:py-24">
+      {/* Hero */}
+      <section className="min-h-[calc(100vh-4rem)] flex items-center py-16 md:py-20">
         <Container>
           <motion.div
             variants={container}
             initial="hidden"
             animate="show"
-            className="max-w-5xl mx-auto"
+            className="max-w-3xl"
           >
-            {/* Badge */}
-            <motion.div variants={item} className="mb-8 lg:mb-10">
-              <Badge variant="accent">
-                {profile.availability.forConsulting ? 'Available for consulting' : 'Currently unavailable'}
-              </Badge>
-            </motion.div>
-
-            {/* Main Heading */}
             <motion.h1
               variants={item}
-              className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight mb-8 lg:mb-12 leading-[1.05]"
+              className="text-[2rem] leading-[1.15] sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6 md:mb-8 text-dark-50"
             >
-              <span className="gradient-text">
-                AI engineer.
-                <br />
-                Serial co-founder.
-              </span>
+              AI engineer and entrepreneur building intelligent systems.
             </motion.h1>
 
-            {/* Subheading */}
             <motion.p
               variants={item}
-              className="text-xl md:text-2xl lg:text-3xl text-dark-300 leading-relaxed mb-12 lg:mb-16 max-w-3xl"
+              className="text-base sm:text-lg md:text-xl text-dark-400 leading-relaxed mb-10 md:mb-12 max-w-2xl"
             >
-              I build production AI systems at Teleste, serving millions of broadband customers.
-              <br />
-              Co-founded four companies focused on automation, recruiting, and AI innovation in the Nordics.
+              Working at the intersection of AI engineering, commercial strategy, and product development.
             </motion.p>
 
-            {/* CTA Buttons */}
             <motion.div
               variants={item}
-              className="flex flex-wrap items-center gap-4 lg:gap-6 mb-16 lg:mb-20"
+              className="flex flex-wrap items-center gap-3 mb-14 md:mb-16"
             >
               <Button href="/work" size="lg">
-                View My Work
-                <FiArrowRight className="w-5 h-5" />
+                View work
+                <FiArrowRight className="w-4 h-4" />
               </Button>
               <Button href="/contact" variant="secondary" size="lg">
-                Get in Touch
+                Get in touch
               </Button>
             </motion.div>
 
-            {/* Social Proof / Stats */}
+            {/* Stat row */}
             <motion.div
               variants={item}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 pt-8 lg:pt-12 border-t border-dark-800"
+              className="grid grid-cols-3 gap-6 md:gap-10 pt-8 border-t border-dark-800/60"
             >
               <div>
-                <div className="text-3xl md:text-4xl lg:text-5xl font-semibold text-dark-50 mb-2">
+                <div className="text-xl sm:text-2xl md:text-3xl font-semibold text-dark-50 mb-1">
                   4+
                 </div>
-                <div className="text-sm lg:text-base text-dark-400">Companies Founded</div>
+                <div className="text-xs sm:text-sm text-dark-500 leading-tight">Companies founded</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl lg:text-5xl font-semibold text-dark-50 mb-2">
-                  5+
+                <div className="text-xl sm:text-2xl md:text-3xl font-semibold text-dark-50 mb-1">
+                  10+
                 </div>
-                <div className="text-sm lg:text-base text-dark-400">Years Experience</div>
+                <div className="text-xs sm:text-sm text-dark-500 leading-tight">Years building</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl lg:text-5xl font-semibold text-dark-50 mb-2">
+                <div className="text-xl sm:text-2xl md:text-3xl font-semibold text-dark-50 mb-1">
                   AI/ML
                 </div>
-                <div className="text-sm lg:text-base text-dark-400">Specialization</div>
-              </div>
-              <div>
-                <div className="text-3xl md:text-4xl lg:text-5xl font-semibold text-dark-50 mb-2">
-                  {profile.location.city}
-                </div>
-                <div className="text-sm lg:text-base text-dark-400">Based in {profile.location.country}</div>
+                <div className="text-xs sm:text-sm text-dark-500 leading-tight">Specialization</div>
               </div>
             </motion.div>
           </motion.div>
         </Container>
-      </Section>
+      </section>
 
       {/* Selected Work */}
-      <Section className="bg-dark-900/30">
+      <Section>
         <Container>
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-semibold mb-4">
-                Selected Work
+            <div className="mb-10 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-dark-50">
+                Selected work
               </h2>
-              <p className="text-xl text-dark-400 max-w-2xl mx-auto">
-                Companies and platforms built
+              <p className="text-dark-500 max-w-xl text-[15px]">
+                Companies, systems, and communities built across AI, software, and automation.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-4xl">
               {featuredProjects.map((project, index) => (
                 <motion.a
                   key={project.id}
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="group bg-dark-900/50 border border-dark-800 rounded-2xl p-8 hover:bg-dark-900/70 hover:border-dark-700 transition-all duration-300"
+                  transition={{ delay: index * 0.07 }}
+                  className="group border border-dark-800/60 rounded-xl p-5 md:p-6 hover:border-dark-700 active:bg-dark-900/30 transition-all duration-200"
                 >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-semibold text-dark-50 mb-2 group-hover:text-accent-400 transition-colors">
+                  <div className="flex items-start justify-between mb-2.5">
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-semibold text-dark-100 group-hover:text-dark-50 transition-colors truncate">
                         {project.name}
                       </h3>
-                      <p className="text-sm text-dark-400 mb-3">{project.role}</p>
+                      <p className="text-xs text-dark-600 mt-0.5">{project.role}</p>
                     </div>
-                    <FiArrowRight className="w-6 h-6 text-dark-600 group-hover:text-accent-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                    <FiArrowRight className="w-4 h-4 text-dark-700 group-hover:text-dark-500 flex-shrink-0 mt-0.5 ml-3 transition-colors" />
                   </div>
-                  <p className="text-dark-300 leading-relaxed mb-4">
+                  <p className="text-dark-500 text-[13px] leading-relaxed line-clamp-3">
                     {project.description}
                   </p>
-                  {project.metrics && Object.values(project.metrics).some(v => v !== "TODO") && (
-                    <div className="flex flex-wrap gap-2">
-                      {project.metrics.participants && project.metrics.participants !== "TODO" && (
-                        <Badge variant="subtle">{project.metrics.participants} participants</Badge>
-                      )}
-                    </div>
-                  )}
                 </motion.a>
               ))}
             </div>
 
-            <div className="text-center mt-12">
-              <Button href="/projects" variant="outline" size="lg">
-                View All Projects
-                <FiArrowRight className="w-5 h-5" />
+            <div className="mt-8">
+              <Button href="/projects" variant="ghost" size="md">
+                All projects
+                <FiArrowRight className="w-4 h-4" />
               </Button>
             </div>
           </motion.div>
         </Container>
       </Section>
 
-      {/* Featured Writing */}
+      {/* Writing */}
       <Section>
         <Container>
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
           >
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-semibold mb-4">
-                Featured Writing
+            <div className="mb-10 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-dark-50">
+                Writing
               </h2>
-              <p className="text-xl text-dark-400 max-w-2xl mx-auto">
-                Latest insights on AI, technology, and innovation
+              <p className="text-dark-500 text-[15px]">
+                Notes on AI, software, systems, and company building.
               </p>
             </div>
 
-            <div className="space-y-4 max-w-3xl mx-auto">
+            <div className="max-w-2xl">
               {featuredArticles.slice(0, 3).map((article, index) => (
                 <motion.a
                   key={article.id}
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="group block bg-dark-900/50 border border-dark-800 rounded-2xl p-6 hover:bg-dark-900/70 hover:border-dark-700 transition-all duration-300"
+                  transition={{ delay: index * 0.07 }}
+                  className="group flex items-start justify-between gap-4 py-5 border-b border-dark-800/40 hover:border-dark-700/60 active:opacity-70 transition-all"
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-xl font-semibold text-dark-50 group-hover:text-accent-400 transition-colors leading-tight flex-1">
-                      {article.title}
-                    </h3>
-                    <FiExternalLink className="w-5 h-5 text-dark-600 group-hover:text-accent-400 flex-shrink-0 mt-1 transition-colors" />
-                  </div>
+                  <h3 className="text-[15px] font-medium text-dark-300 group-hover:text-dark-100 transition-colors leading-snug flex-1">
+                    {article.title}
+                  </h3>
+                  <FiExternalLink className="w-3.5 h-3.5 text-dark-700 group-hover:text-dark-500 flex-shrink-0 mt-0.5 transition-colors" />
                 </motion.a>
               ))}
             </div>
 
-            <div className="text-center mt-12">
-              <Button href="/writing" variant="outline" size="lg">
-                View All Articles
-                <FiArrowRight className="w-5 h-5" />
+            <div className="mt-8">
+              <Button href="/writing" variant="ghost" size="md">
+                All writing
+                <FiArrowRight className="w-4 h-4" />
               </Button>
             </div>
           </motion.div>
         </Container>
       </Section>
 
-      {/* Connect */}
-      <Section className="bg-dark-900/30">
-        <Container size="sm">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h2 className="text-4xl md:text-5xl font-semibold mb-4">
-              Connect
-            </h2>
-            <p className="text-xl text-dark-400 mb-12 max-w-xl mx-auto">
-              Find me on these platforms
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {socialLinks.filter(link => ['GitHub', 'LinkedIn', 'X (Twitter)'].includes(link.platform)).map((link, index) => {
-                const Icon = getIcon(link.platform);
-                return (
-                  <motion.a
-                    key={link.platform}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="group flex items-center gap-3 px-6 py-4 rounded-xl bg-dark-900/50 border border-dark-800 hover:bg-dark-900 hover:border-dark-600 transition-all duration-300"
-                  >
-                    <Icon className="w-6 h-6 text-dark-400 group-hover:text-accent-400 transition-colors" />
-                    <span className="font-medium text-dark-200 group-hover:text-dark-50 transition-colors">
-                      {link.platform}
-                    </span>
-                  </motion.a>
-                );
-              })}
-              <motion.a
-                href={`mailto:${profile.email}`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="group flex items-center gap-3 px-6 py-4 rounded-xl bg-dark-900/50 border border-dark-800 hover:bg-dark-900 hover:border-dark-600 transition-all duration-300"
-              >
-                <FiMail className="w-6 h-6 text-dark-400 group-hover:text-accent-400 transition-colors" />
-                <span className="font-medium text-dark-200 group-hover:text-dark-50 transition-colors">
-                  Email
-                </span>
-              </motion.a>
-            </div>
-          </motion.div>
-        </Container>
-      </Section>
-
-      {/* Quick Links / CTA */}
+      {/* Contact */}
       <Section>
         <Container>
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto"
+            transition={{ duration: 0.5 }}
+            className="max-w-lg"
           >
-            <h2 className="text-4xl md:text-5xl font-semibold mb-6">
-              Available for consulting
+            <h2 className="text-2xl md:text-3xl font-semibold mb-3 text-dark-50">
+              Get in touch
             </h2>
-            <p className="text-xl text-dark-400 mb-12">
-              AI strategy and implementation. MLOps infrastructure. Production ML systems.
-              <br />
-              Reach out if you're building in AI or enterprise tech.
+            <p className="text-dark-500 text-[15px] mb-7 leading-relaxed">
+              For AI systems, software, partnerships, or company-building discussions, reach out directly.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button href="/contact" size="lg">
-                Get in Touch
-                <FiArrowRight className="w-5 h-5" />
-              </Button>
-              <Button href="/work" variant="secondary" size="lg">
-                View Experience
-              </Button>
-            </div>
+            <Button href="/contact" size="lg">
+              Contact
+              <FiArrowRight className="w-4 h-4" />
+            </Button>
           </motion.div>
         </Container>
       </Section>

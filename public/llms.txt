@@ -1,12 +1,11 @@
-# Riku Lauttia - AI Engineer & Co-Founder
+# Riku Lauttia — AI Engineer & Founder
 
-> AI Engineer and serial co-founder based in Turku, Finland. Building innovative solutions at the intersection of artificial intelligence and enterprise technology.
+> AI engineer and founder building production AI systems, software infrastructure, and AI-native technology ventures.
 
 ## Overview
 
-Riku Lauttia is an AI Engineer and serial entrepreneur with expertise in machine learning, deep learning, and enterprise AI solutions. Currently contributing to Teleste's broadband R&D team while co-founding multiple ventures including Since AI, Root, Kolt, and Attractor.
+Riku Lauttia is an AI engineer and founder focused on production AI systems, machine learning, software infrastructure, automation, and AI-native ventures. Currently building at the intersection of technical systems and company building.
 
-- Location: Turku, Finland
 - Email: riku@lauttia.com
 - Status: Available for consulting and partnerships
 - Website: https://rikulauttia.com
@@ -15,11 +14,11 @@ Riku Lauttia is an AI Engineer and serial entrepreneur with expertise in machine
 
 ### Homepage
 https://rikulauttia.com
-Main landing page with overview of current ventures, featured writing, and availability status.
+Overview of current work, selected ventures, writing, and contact.
 
 ### About
 https://rikulauttia.com/about
-Background, education (University of Turku, VSP), skills in AI/ML, software engineering, and leadership. AWS Certified Cloud Practitioner and Full Stack Open certified.
+Background, education (Aalto University — MSc Machine Learning, Data Science and AI), expertise, and certifications.
 
 ### Work Experience
 https://rikulauttia.com/work
@@ -32,78 +31,51 @@ Professional experience including:
 - Partnerships Lead at Boost Turku (January 2025 - December 2025)
 - Technical Solutions Specialist at VSP (January 2023 - May 2023)
 
-### Projects & Ventures
+### Projects
 https://rikulauttia.com/projects
-Current active projects:
-- Since AI: Northern Europe's premier AI innovation platform and hackathon
-- Root: Nordic region's premier innovative recruiting event
-- Kolt: Automation solutions for complex operational challenges
-- Attractor: Technology consultancy building production-grade software and AI systems
+Active ventures:
+- Since AI: AI community and innovation platform connecting builders, companies, research, and capital
+- Root: Recruitment and talent platform connecting ambitious technology talent with companies
+- Kolt: Automation and operational technology company focused on practical business workflows
+- Attractor: Technology consultancy building production-grade software, automation, and AI systems
 
 ### Writing
 https://rikulauttia.com/writing
-Articles and insights on AI, technology, and innovation:
+Notes on AI, software, systems, and company building:
 - "Selling AI Without the Hype: A Playbook for Turning Interest Into Partnerships"
 - "AI at the Edge: Why Hardware and Embedded AI Will Decide the Next Decade"
 - "From San Francisco to Europe: The 2025 Playbook for Building Agentic AI That Scales"
 - "A Social Contract for AI"
-- "Beyond the Hype: Why Europe's Builders Will Define AI's Next Chapter"
+- "Europe Must Stay Hungry: Why the Next Decade of AI Will Be Decided Here"
 
 ### Contact
 https://rikulauttia.com/contact
 Email: riku@lauttia.com
-Social: LinkedIn, GitHub, X (Twitter), Instagram, Facebook, Substack, TikTok, YouTube, Medium
+Social: LinkedIn, GitHub, X (Twitter)
 
-### What I'm Working On Now
+### Now
 https://rikulauttia.com/now
-Current focus areas and recent updates (updated regularly).
+Current focus areas and priorities (updated regularly).
 
-## Core Expertise
+## Expertise
 
-### Artificial Intelligence
-Machine Learning, Deep Learning, Neural Networks, Computer Vision, Natural Language Processing, MLOps & AI Strategy
+### AI & Machine Learning
+Machine Learning, Deep Learning, Neural Networks, Computer Vision, Natural Language Processing, MLOps & AI Infrastructure
 
 ### Software Engineering
-Python, C++, JavaScript, React, Full-Stack Development, Cloud Infrastructure (AWS), Microservices Architecture, DevOps & CI/CD, System Design
+Python, C++, JavaScript, React, Full-Stack Development, Cloud Infrastructure (AWS), Microservices & System Design, DevOps & CI/CD, Data Systems
 
-### Leadership & Strategy
-Startup Co-Founding, Strategic Partnerships, Business Development, Technology Innovation, Team Leadership, Product Strategy
+### Founder & Operator
+Company Building, Strategic Partnerships, Product Strategy, Technical Architecture, Team Leadership, Business Development
 
-## Quick Facts
+## Education
 
-- **Education**: University of Turku (Information and Communication Technology), VSP
-- **Thesis**: "The Role of Artificial Intelligence in Analyzing Large Datasets and Its Utilization in Commercial Decision-Making"
-- **Certifications**: AWS Certified Cloud Practitioner (March 2025), Full Stack Open - University of Helsinki (November 2024)
-- **Location**: Turku, Southwest Finland, Finland
-- **Companies Founded**: 4+ (Since AI, Root, Kolt, Attractor)
-- **Experience**: 5+ years in AI/ML and software engineering
-- **Current Role**: Software Engineer at Teleste + Multiple Co-Founder roles
+- Aalto University — MSc Machine Learning, Data Science and Artificial Intelligence
 
-## Current Ventures
+## Certifications
 
-1. **Since AI** (https://sinceai.fi)
-   - Role: Co-Founder
-   - Focus: AI hackathon and innovation platform
-   - Status: Active
-   - Impact: Strategic partnerships with global tech leaders
-
-2. **Root** (https://rootexpo.fi)
-   - Role: Co-Founder
-   - Focus: Innovative recruiting events
-   - Status: Active
-   - Impact: 1000+ participants, connecting top talent with leading tech companies
-
-3. **Kolt** (https://kolt.fi)
-   - Role: Co-Founder
-   - Focus: Automation solutions for complex operational challenges
-   - Status: Active
-   - Stage: Early-stage R&D and product development
-
-4. **Attractor** (https://attractor.fi)
-   - Role: Co-Founder
-   - Focus: Technology consultancy, production-grade software, applied AI, security-first systems
-   - Status: Active
-   - Services: Client discovery, AI implementation, solution architecture
+- AWS Certified Cloud Practitioner (March 2025)
+- Full Stack Open — University of Helsinki (November 2024)
 
 ## Social Links
 
@@ -112,17 +84,13 @@ Startup Co-Founding, Strategic Partnerships, Business Development, Technology In
 - X (Twitter): https://x.com/rikulauttia
 - Substack: https://substack.com/@rikulauttia
 - Medium: https://medium.com/@rikulauttia
-- Instagram: https://www.instagram.com/rikulauttia
-- Facebook: https://www.facebook.com/rikulauttia
-- TikTok: https://www.tiktok.com/@rikulauttia
-- YouTube: https://www.youtube.com/@rikulauttia
 
 ## Availability
 
-Open to consulting opportunities, partnerships, and innovative projects in AI and enterprise solutions.
+Available for AI systems, software, partnerships, and company-building discussions.
 
 For inquiries: riku@lauttia.com
 
 ---
 
-Last updated: 2026-01-11
+Last updated: 2026-05-01

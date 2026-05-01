@@ -1,86 +1,75 @@
 import { motion } from 'framer-motion';
-import { FiLinkedin, FiGithub, FiInstagram, FiFacebook, FiMail } from 'react-icons/fi';
-import { FaXTwitter, FaMedium } from 'react-icons/fa6';
+import { FiLinkedin, FiGithub, FiMail } from 'react-icons/fi';
+import { FaXTwitter } from 'react-icons/fa6';
 import Layout from '../components/layout/Layout';
 import Container from '../components/layout/Container';
 import Section from '../components/layout/Section';
 import SEO, { getBreadcrumbs } from '../components/SEO';
-import { getSocialLinks } from '../src/lib/content';
 
 export default function Contact() {
-  const allSocialLinks = getSocialLinks();
-  const requestedPlatforms = ['LinkedIn', 'X (Twitter)', 'GitHub', 'Instagram', 'Facebook', 'Medium'];
-  const socialLinks = allSocialLinks.filter(link => requestedPlatforms.includes(link.platform));
-
-  const getSocialIcon = (platform) => {
-    const iconProps = { className: "w-5 h-5" };
-    switch(platform) {
-      case 'LinkedIn': return <FiLinkedin {...iconProps} />;
-      case 'GitHub': return <FiGithub {...iconProps} />;
-      case 'X (Twitter)': return <FaXTwitter {...iconProps} />;
-      case 'Instagram': return <FiInstagram {...iconProps} />;
-      case 'Facebook': return <FiFacebook {...iconProps} />;
-      case 'Medium': return <FaMedium {...iconProps} />;
-      default: return null;
-    }
-  };
+  const links = [
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/rikulauttia', icon: FiLinkedin },
+    { name: 'GitHub', href: 'https://github.com/rikulauttia', icon: FiGithub },
+    { name: 'X', href: 'https://x.com/rikulauttia', icon: FaXTwitter },
+  ];
 
   return (
     <Layout>
       <SEO
-        title="Contact | Riku Lauttia"
-        description="Get in touch with Riku Lauttia - AI Engineer and Co-Founder."
+        title="Contact — Riku Lauttia"
+        description="For AI systems, software, partnerships, or company-building discussions, reach out directly."
         canonical="https://rikulauttia.com/contact"
         breadcrumbs={getBreadcrumbs('/contact', 'Contact')}
       />
 
-      <Section className="min-h-[calc(100vh-5rem)] flex items-center justify-center py-12 md:py-16">
-        <Container size="sm">
+      <section className="min-h-[calc(100vh-4rem)] flex items-center py-16 md:py-20">
+        <Container size="default">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-2xl mx-auto text-center"
+            transition={{ duration: 0.45 }}
+            className="max-w-lg"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-8 md:mb-12">
-              Get in Touch
+            <h1 className="text-3xl md:text-4xl font-semibold mb-5 text-dark-50">
+              Contact
             </h1>
 
-            {/* Email */}
-            <div className="mb-8 md:mb-12">
+            <p className="text-dark-400 leading-relaxed mb-10 text-[15px] max-w-sm">
+              For AI systems, software, partnerships, or company-building discussions, reach out directly.
+            </p>
+
+            {/* Email — full-width tap area on mobile */}
+            <div className="mb-10">
               <a
                 href="mailto:riku@lauttia.com"
-                className="inline-flex items-center gap-3 px-6 py-4 min-h-[60px] bg-dark-800 border border-dark-700 rounded-lg hover:bg-dark-700 hover:border-accent-400 text-dark-50 hover:text-accent-400 transition-all text-base md:text-lg font-medium"
+                className="inline-flex items-center gap-3 min-h-[44px] text-dark-200 hover:text-dark-50 active:text-dark-300 transition-colors text-base break-all"
               >
-                <FiMail className="w-6 h-6" />
+                <FiMail className="w-[18px] h-[18px] text-dark-500 flex-shrink-0" />
                 riku@lauttia.com
               </a>
             </div>
 
-            {/* Social Links */}
-            <div className="pt-6 md:pt-8 border-t border-dark-700">
-              <h2 className="text-lg md:text-xl font-semibold text-dark-50 mb-6">
-                Connect
-              </h2>
-              <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-                {socialLinks.map((link) => (
+            {/* Social links — 44px touch targets */}
+            <div className="pt-7 border-t border-dark-800/60">
+              <div className="flex items-center gap-1 -ml-2">
+                {links.map((link) => (
                   <a
-                    key={link.platform}
-                    href={link.url}
+                    key={link.name}
+                    href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-3 min-h-[48px] bg-dark-800 border border-dark-700 rounded-lg hover:bg-dark-700 hover:border-accent-400 text-dark-200 hover:text-accent-400 transition-all"
-                    aria-label={link.platform}
+                    className="flex items-center gap-1.5 min-h-[44px] px-3 text-dark-500 hover:text-dark-200 active:text-dark-300 transition-colors text-sm"
+                    aria-label={link.name}
                   >
-                    {getSocialIcon(link.platform)}
-                    <span className="text-sm font-medium">{link.platform}</span>
+                    <link.icon className="w-[17px] h-[17px]" />
+                    <span>{link.name}</span>
                   </a>
                 ))}
               </div>
             </div>
           </motion.div>
         </Container>
-      </Section>
+      </section>
     </Layout>
   );
 }

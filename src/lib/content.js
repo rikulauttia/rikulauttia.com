@@ -10,6 +10,7 @@ export const getCertifications = () => profileData.certifications;
 export const getSkills = () => profileData.skills.categories;
 export const getSocialLinks = () => profileData.social;
 export const getAvailability = () => profileData.personal.availability;
+export const getSEO = () => profileData.meta.seo;
 
 // Roles
 export const getRoles = () => rolesData.roles;

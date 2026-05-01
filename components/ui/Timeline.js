@@ -4,45 +4,42 @@ import { FiExternalLink } from 'react-icons/fi';
 const TimelineItem = ({ role, company, period, description, url, isLast }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="relative pl-8 pb-12 last:pb-0"
+      transition={{ duration: 0.4 }}
+      className="relative pl-5 pb-10 last:pb-0"
     >
-      {/* Timeline line */}
       {!isLast && (
-        <div className="absolute left-[7px] top-6 bottom-0 w-px bg-dark-800" />
+        <div className="absolute left-[3px] top-3 bottom-0 w-px bg-dark-800/60" />
       )}
 
-      {/* Timeline dot */}
-      <div className="absolute left-0 top-2 w-4 h-4 rounded-full bg-accent-500 border-2 border-dark-950" />
+      <div className="absolute left-0 top-[7px] w-[7px] h-[7px] rounded-full bg-dark-600" />
 
-      {/* Content */}
-      <div className="bg-dark-900/50 border border-dark-800 rounded-xl p-6 hover:bg-dark-900/70 hover:border-dark-700 transition-all duration-300">
-        <div className="flex items-start justify-between gap-4 mb-3">
-          <div>
-            <h3 className="text-xl font-semibold text-dark-50 mb-1">{role}</h3>
-            <div className="flex items-center gap-2">
-              {url ? (
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent-400 hover:text-accent-300 transition-colors inline-flex items-center gap-1"
-                >
-                  {company}
-                  <FiExternalLink className="w-3.5 h-3.5" />
-                </a>
-              ) : (
-                <span className="text-accent-400">{company}</span>
-              )}
-            </div>
-          </div>
-          <span className="text-sm text-dark-400 whitespace-nowrap">{period}</span>
+      <div>
+        {/* Role + period: stacked on mobile, inline on sm+ */}
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0.5 sm:gap-4 mb-1.5">
+          <h3 className="text-base font-medium text-dark-50 leading-snug">{role}</h3>
+          <span className="text-xs text-dark-600 sm:whitespace-nowrap sm:mt-0.5 shrink-0">{period}</span>
         </div>
 
-        <p className="text-dark-300 leading-relaxed">{description}</p>
+        <div className="mb-3">
+          {url ? (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm text-dark-400 hover:text-dark-200 transition-colors"
+            >
+              {company}
+              <FiExternalLink className="w-3 h-3" />
+            </a>
+          ) : (
+            <span className="text-sm text-dark-400">{company}</span>
+          )}
+        </div>
+
+        <p className="text-dark-500 text-[14px] leading-relaxed">{description}</p>
       </div>
     </motion.div>
   );
@@ -50,7 +47,7 @@ const TimelineItem = ({ role, company, period, description, url, isLast }) => {
 
 const Timeline = ({ items }) => {
   return (
-    <div className="relative">
+    <div className="relative max-w-2xl">
       {items.map((item, index) => (
         <TimelineItem
           key={index}

@@ -23,10 +23,6 @@ export default function Document() {
         {/* Meta tags */}
         <meta name="theme-color" content="#000000" />
         <meta name="author" content="Riku Lauttia" />
-        <meta name="geo.region" content="FI-02" />
-        <meta name="geo.placename" content="Turku" />
-        <meta name="geo.position" content="60.4518;22.2666" />
-        <meta name="ICBM" content="60.4518, 22.2666" />
 
         {/* Google Site Verification */}
         <meta name="google-site-verification" content="j-ILo9bEkx8_pOtSj67g1iTTYmssO0BB9fyQF_5iQcw" />
@@ -49,7 +45,7 @@ export default function Document() {
               "name": "Riku Lauttia",
               "url": "https://rikulauttia.com",
               "image": "https://rikulauttia.com/og-image.jpg",
-              "jobTitle": "AI Engineer & Co-Founder",
+              "jobTitle": "AI Engineer & Founder",
               "worksFor": [
                 {
                   "@type": "Organization",
@@ -59,62 +55,44 @@ export default function Document() {
                 {
                   "@type": "Organization",
                   "name": "Since AI",
-                  "description": "AI hackathon and innovation platform",
-                  "url": "https://sinceai.fi"
+                  "description": "AI community and innovation platform",
+                  "url": "https://sinceai.ai"
                 },
                 {
                   "@type": "Organization",
                   "name": "Root",
-                  "description": "Nordic region's premier innovative recruiting event",
+                  "description": "Recruitment and talent platform",
                   "url": "https://rootexpo.fi"
                 },
                 {
                   "@type": "Organization",
                   "name": "Kolt",
-                  "description": "Automation solutions for complex operational challenges",
+                  "description": "Automation and operational technology",
                   "url": "https://kolt.fi"
                 },
                 {
                   "@type": "Organization",
                   "name": "Attractor",
-                  "description": "Technology consultancy building production-grade software, applied AI, and security-first systems",
+                  "description": "Technology consultancy building production-grade software, AI, and automation systems",
                   "url": "https://attractor.fi"
-                },
-                {
-                  "@type": "Organization",
-                  "name": "Boost Turku",
-                  "description": "AI innovation initiatives and strategic partnerships",
-                  "url": "https://www.boostturku.com"
                 }
               ],
               "alumniOf": [
                 {
                   "@type": "Organization",
-                  "name": "University of Turku",
-                  "url": "https://www.utu.fi"
-                },
-                {
-                  "@type": "Organization",
-                  "name": "VSP",
-                  "url": "https://vsp.fi"
+                  "name": "Aalto University",
+                  "url": "https://www.aalto.fi"
                 }
               ],
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Turku",
-                "addressRegion": "Southwest Finland",
-                "addressCountry": "Finland"
-              },
               "email": "riku@lauttia.com",
               "knowsAbout": [
                 "Artificial Intelligence",
                 "Machine Learning",
-                "Deep Learning",
                 "Software Engineering",
-                "Enterprise AI Solutions",
-                "Technology Innovation",
-                "Startup Leadership",
-                "AI Strategy"
+                "Data Systems",
+                "Automation",
+                "AI Infrastructure",
+                "Technology Entrepreneurship"
               ],
               "sameAs": [
                 "https://www.linkedin.com/in/rikulauttia",
@@ -125,7 +103,7 @@ export default function Document() {
                 "https://substack.com/@rikulauttia",
                 "https://medium.com/@rikulauttia"
               ],
-              "description": "AI Engineer and serial co-founder of Since AI, Root, Kolt, and Attractor. Expert in artificial intelligence, machine learning, and enterprise technology solutions."
+              "description": "AI engineer and founder building production AI systems, software infrastructure, and AI-native technology ventures."
             })
           }}
         />

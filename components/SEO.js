@@ -1,14 +1,14 @@
 import Head from 'next/head';
 
 const SEO = ({
-  title = 'Riku Lauttia | AI Engineer & Co-Founder',
-  description = 'AI Engineer and serial co-founder of Since AI, Root, Kolt, and Attractor. Driving innovation in artificial intelligence and enterprise solutions from Turku, Finland.',
+  title = 'Riku Lauttia — AI Engineer & Founder',
+  description = 'Riku Lauttia is an AI engineer and founder focused on production AI systems, machine learning, software infrastructure, automation, and AI-native ventures.',
   canonical = 'https://rikulauttia.com',
   ogImage = 'https://rikulauttia.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  jsonLd = null, // Pass structured data object
-  breadcrumbs = null, // Pass breadcrumb array for inner pages
+  jsonLd = null,
+  breadcrumbs = null,
 }) => {
   return (
     <Head>
@@ -78,33 +78,31 @@ const SEO = ({
   );
 };
 
-// Helper to generate Person schema
 export const getPersonSchema = (profile) => ({
   '@context': 'https://schema.org',
   '@type': 'Person',
   'name': profile.name,
   'url': 'https://rikulauttia.com',
   'image': 'https://rikulauttia.com/og-image.jpg',
-  'jobTitle': profile.tagline,
+  'jobTitle': 'AI Engineer & Founder',
   'email': profile.email,
-  'address': {
-    '@type': 'PostalAddress',
-    'addressLocality': profile.location.city,
-    'addressRegion': profile.location.region,
-    'addressCountry': profile.location.country,
+  'alumniOf': {
+    '@type': 'Organization',
+    'name': 'Aalto University',
+    'url': 'https://www.aalto.fi',
   },
-  'sameAs': profile.social?.map(s => s.url) || [],
   'knowsAbout': [
     'Artificial Intelligence',
     'Machine Learning',
-    'Deep Learning',
     'Software Engineering',
-    'Startup Leadership',
+    'Data Systems',
+    'Automation',
+    'AI Infrastructure',
+    'Technology Entrepreneurship',
   ],
   'description': profile.bio,
 });
 
-// Helper to generate Article schema
 export const getArticleSchema = (article, author = 'Riku Lauttia') => ({
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -126,7 +124,6 @@ export const getArticleSchema = (article, author = 'Riku Lauttia') => ({
   'keywords': article.tags?.join(', '),
 });
 
-// Helper to generate breadcrumbs
 export const getBreadcrumbs = (path, label) => {
   const breadcrumbs = [
     { name: 'Home', url: 'https://rikulauttia.com' },

@@ -5,35 +5,23 @@
   "type": "object",
   "personal": {
     "name": "Riku Lauttia",
-    "tagline": "AI Engineer & Co-Founder",
-    "bio": "AI Engineer and serial co-founder based in Turku, Finland. I build production AI systems and companies.",
-    "bioLong": "I'm an AI Engineer and serial co-founder based in Turku, Finland. I build production AI systems and companies. At Teleste, I develop scalable software components for broadband R&D. Built caching systems that reduced configuration latency. Created testing frameworks for enterprise deployments. Systems serve millions of broadband users globally. Co-founded four companies: Since AI (AI hackathons), Root (recruiting events), Kolt (automation), and Attractor (consultancy). 1000+ participants across events. Strategic partnerships with Nordic tech leaders. I combine technical implementation with business execution. Focus on shipping production systems that deliver measurable value.",
+    "tagline": "AI Engineer & Founder",
+    "bio": "AI engineer and founder building production AI systems, software infrastructure, and AI-native technology ventures.",
+    "bioLong": "I am an AI engineer and founder working at the intersection of machine learning, software infrastructure, and venture building. My work focuses on turning technical ideas into production systems, companies, and communities. I am especially interested in AI systems that create measurable value in real operational environments — not just demos or prototypes. I have founded and co-founded several technology initiatives across AI, automation, recruiting, and software consulting. Alongside company building, I work on production AI systems and continue to deepen my technical foundation in machine learning, data systems, and infrastructure. I study Machine Learning, Data Science and Artificial Intelligence at Aalto University. The long-term goal is simple: build useful AI systems, strong technology companies, and globally relevant technical work.",
     "email": "riku@lauttia.com",
-    "location": {
-      "city": "Turku",
-      "region": "Southwest Finland",
-      "country": "Finland",
-      "countryCode": "FI"
-    },
     "availability": {
       "status": "available",
       "forConsulting": true,
       "forPartnerships": true,
-      "message": "Available for AI consulting, strategic partnerships, and production implementations."
+      "message": "Available for AI systems, software, partnerships, and company-building discussions."
     }
   },
   "education": [
     {
-      "institution": "University of Turku",
-      "degree": "Information and Communication Technology",
-      "field": "TODO",
-      "startDate": "TODO",
-      "endDate": "TODO",
-      "url": "https://www.utu.fi",
-      "thesis": {
-        "title": "The Role of Artificial Intelligence in Analyzing Large Datasets and Its Utilization in Commercial Decision-Making",
-        "url": "https://github.com/rikulauttia/AI-Commercial-DecisionMaking"
-      }
+      "institution": "Aalto University",
+      "degree": "Master of Science",
+      "field": "Machine Learning, Data Science and Artificial Intelligence",
+      "url": "https://www.aalto.fi"
     }
   ],
   "certifications": [
@@ -53,14 +41,14 @@
   "skills": {
     "categories": [
       {
-        "name": "Artificial Intelligence",
+        "name": "AI & Machine Learning",
         "skills": [
           "Machine Learning",
           "Deep Learning",
           "Neural Networks",
           "Computer Vision",
           "Natural Language Processing",
-          "MLOps & AI Strategy"
+          "MLOps & AI Infrastructure"
         ]
       },
       {
@@ -69,20 +57,20 @@
           "Python, C++ & JavaScript",
           "React & Full-Stack Development",
           "Cloud Infrastructure (AWS)",
-          "Microservices Architecture",
+          "Microservices & System Design",
           "DevOps & CI/CD",
-          "System Design"
+          "Data Systems"
         ]
       },
       {
-        "name": "Leadership & Strategy",
+        "name": "Founder & Operator",
         "skills": [
-          "Startup Co-Founding",
+          "Company Building",
           "Strategic Partnerships",
-          "Business Development",
-          "Technology Innovation",
+          "Product Strategy",
+          "Technical Architecture",
           "Team Leadership",
-          "Product Strategy"
+          "Business Development"
         ]
       }
     ]
@@ -136,19 +124,19 @@
   ],
   "meta": {
     "seo": {
-      "title": "Riku Lauttia | AI Engineer & Co-Founder",
-      "description": "AI Engineer and serial co-founder of Since AI, Root, Kolt, and Attractor. Building production AI systems and companies in Turku, Finland.",
+      "title": "Riku Lauttia — AI Engineer & Founder",
+      "description": "Riku Lauttia is an AI engineer and founder focused on production AI systems, machine learning, software infrastructure, automation, and AI-native ventures.",
       "keywords": [
         "AI Engineer",
         "Artificial Intelligence",
         "Machine Learning",
-        "Co-Founder",
-        "Startup",
-        "Technology Innovation",
-        "Turku",
-        "Finland"
+        "Founder",
+        "Production AI",
+        "Software Infrastructure",
+        "Automation",
+        "AI Systems"
       ]
     },
-    "lastUpdated": "2026-01-11"
+    "lastUpdated": "2026-05-01"
   }
 }
