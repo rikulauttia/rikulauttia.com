@@ -129,7 +129,7 @@ const HomePage = () => {
 
       {/* About */}
       <section id="about" className="wrap scroll-mt-20 py-12 md:py-16">
-        <h2 className="text-2xl tracking-tight md:text-[28px]">About</h2>
+        <h2 className="text-2xl tracking-tight md:text-[28px]">about</h2>
         <div className="mt-6 max-w-prose space-y-5 font-normal text-ink">
           {about.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
@@ -139,7 +139,7 @@ const HomePage = () => {
 
       {/* Writing */}
       <section id="writing" className="wrap scroll-mt-20 py-12 md:py-16">
-        <h2 className="text-2xl tracking-tight md:text-[28px]">Writing</h2>
+        <h2 className="text-2xl tracking-tight md:text-[28px]">writing</h2>
         <ul className="mt-8 max-w-prose border-t border-line">
           {articles.map((article) => (
             <li key={article.id} className="border-b border-line">
