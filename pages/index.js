@@ -3,7 +3,6 @@ import SEO, { getPersonSchema } from '../components/SEO';
 import {
   getProfile,
   getAbout,
-  getFocusAreas,
   getEducation,
   getWork,
   getFeaturedArticles,
@@ -20,7 +19,6 @@ const introLinks = [
 const HomePage = () => {
   const profile = getProfile();
   const about = getAbout();
-  const focusAreas = getFocusAreas();
   const education = getEducation();
   const work = getWork();
   const articles = getFeaturedArticles().slice(0, 3);
@@ -66,13 +64,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Selected work */}
-      <section id="work" className="wrap scroll-mt-20 py-12 md:py-16">
-        <h2 className="text-2xl tracking-tight md:text-[28px]">Selected work</h2>
-        <p className="mt-2 max-w-prose text-ink-muted">
-          Work across software, AI, products, and technology organizations.
-        </p>
-        <ul className="mt-10 border-t border-line">
+      {/* Experience */}
+      <section id="work" className="wrap scroll-mt-20 pb-12 md:pb-16">
+        <ul className="border-t border-line">
           {work.map((item) => (
             <li
               key={item.id}
@@ -94,7 +88,7 @@ const HomePage = () => {
                     className="h-5 w-auto"
                   />
                 </a>
-                <div className="mt-2 text-[15px] text-ink-faint">{item.area}</div>
+                <div className="mt-2 text-[15px] text-ink-faint">{item.role}</div>
               </div>
               <p className="max-w-prose text-ink-muted">{item.description}</p>
             </li>
@@ -144,30 +138,33 @@ const HomePage = () => {
 
         <div className="mt-10 max-w-prose">
           <h3 className="text-[13px] font-medium uppercase tracking-wider text-ink-faint">
-            Focus areas
-          </h3>
-          <ul className="mt-3 space-y-1 text-ink-muted">
-            {focusAreas.map((area) => (
-              <li key={area}>{area}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mt-10 max-w-prose">
-          <h3 className="text-[13px] font-medium uppercase tracking-wider text-ink-faint">
             Education
           </h3>
-          <p className="mt-3 text-ink-muted">
-            {education[0].degree}, {education[0].field} &mdash;{' '}
-            <a
-              href={education[0].url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link"
-            >
-              {education[0].institution}
-            </a>
-          </p>
+          <ul className="mt-4 space-y-5">
+            {education.map((item) => (
+              <li key={item.field}>
+                <div className="text-ink">
+                  {item.degree} {item.field}
+                </div>
+                <div className="mt-0.5 text-[15px] text-ink-faint">
+                  {item.period} &middot;{' '}
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link"
+                  >
+                    {item.institution}
+                  </a>
+                </div>
+                {item.thesis && (
+                  <div className="mt-1.5 text-[14px] text-ink-faint">
+                    Thesis: {item.thesis}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

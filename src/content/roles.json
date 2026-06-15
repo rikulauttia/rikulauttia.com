@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Selected Work",
-  "description": "Selected work across software, AI, products, and technology organizations",
+  "title": "Experience",
+  "description": "Work experience across software, AI, products, and technology organizations",
   "type": "array",
   "roles": [
     {
       "id": "teleste",
       "name": "Teleste",
-      "area": "Software engineering",
+      "role": "Software Engineer",
       "description": "Software engineering for broadband access-network systems, including scalable components, performance improvements, testing, and CI/CD.",
       "url": "https://www.teleste.com",
       "logo": "/images/logos/teleste.webp",
@@ -17,8 +17,8 @@
     {
       "id": "since-ai",
       "name": "Since AI",
-      "area": "AI community and innovation",
-      "description": "AI community and innovation platform connecting builders, companies, research, and capital through practical technology programs.",
+      "role": "Co-Founder",
+      "description": "Since AI is building a global, execution-focused AI innovation ecosystem — bringing together developers, researchers, founders, investors, and industry partners to turn frontier AI into real products, pilots, and companies.",
       "url": "https://sinceai.ai/",
       "logo": "/images/logos/since-ai.webp",
       "logoWidth": 41,
@@ -27,8 +27,8 @@
     {
       "id": "root",
       "name": "Root",
-      "area": "Technology talent and recruitment",
-      "description": "Platform and event concept connecting ambitious technology talent with companies.",
+      "role": "Co-Founder",
+      "description": "Root is Europe's premier innovative recruiting event, connecting top talent with leading global technology companies.",
       "url": "https://rootexpo.fi/",
       "logo": "/images/logos/root.webp",
       "logoWidth": 240,
@@ -37,8 +37,8 @@
     {
       "id": "kolt",
       "name": "Kolt",
-      "area": "Automation and operational technology",
-      "description": "Technology focused on automation, operational workflows, and practical software systems.",
+      "role": "Founding member",
+      "description": "Kolt develops automation solutions that address complex operational challenges through advanced technology integration — building robust platforms across multiple technical domains for mission-critical applications.",
       "url": "https://kolt.fi/",
       "logo": "/images/logos/kolt.webp",
       "logoWidth": 185,
@@ -47,8 +47,8 @@
     {
       "id": "attractor",
       "name": "Attractor",
-      "area": "Software, AI, and automation",
-      "description": "Production software, AI systems, and automation developed around concrete business needs.",
+      "role": "Founding member, Commercial Director",
+      "description": "Attractor is a technology consultancy building production-grade software, applied AI, and security-first systems. Working at the intersection of commercial execution and technical delivery — client discovery, scoping, proposals, and partnerships, alongside hands-on AI implementation and solution architecture.",
       "url": "https://attractor.fi/",
       "logo": "/images/logos/attractor.webp",
       "logoWidth": 60,

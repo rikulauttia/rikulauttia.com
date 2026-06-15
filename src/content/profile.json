@@ -12,19 +12,21 @@
     "Riku Lauttia is focused on building intelligent systems that shape the future of technology and business. He works at the intersection of AI engineering, commercial strategy, and product development.",
     "With a background in business, software engineering, and applied AI, Riku combines deep technical expertise with strong commercial acumen."
   ],
-  "focusAreas": [
-    "AI and machine learning",
-    "Software engineering",
-    "Product development",
-    "Data and cloud systems",
-    "Technology and commercial strategy"
-  ],
   "education": [
     {
+      "period": "2026–2028",
       "degree": "MSc",
       "field": "Machine Learning, Data Science and Artificial Intelligence",
       "institution": "Aalto University",
       "url": "https://www.aalto.fi/fi/koulutustarjonta/machine-learning-data-science-and-artificial-intelligence-master-of-science-technology"
+    },
+    {
+      "period": "2023–2026",
+      "degree": "BSc",
+      "field": "Information and Communication Technology",
+      "institution": "University of Turku",
+      "url": "https://www.utu.fi/en",
+      "thesis": "The Role of Artificial Intelligence in Analyzing Large Datasets and Its Utilization in Commercial Decision-Making"
     }
   ],
   "social": [
