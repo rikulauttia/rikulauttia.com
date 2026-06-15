@@ -30,7 +30,6 @@ const HomePage = () => {
       logo: item.logo,
       logoWidth: item.logoWidth,
       logoHeight: item.logoHeight,
-      displayHeight: item.displayHeight,
       name: item.name,
       url: item.url,
       role: item.role,
@@ -42,7 +41,6 @@ const HomePage = () => {
       logo: item.logo,
       logoWidth: item.logoWidth,
       logoHeight: item.logoHeight,
-      displayHeight: item.displayHeight,
       name: item.institution,
       url: item.url,
       role: item.degree,
@@ -98,9 +96,9 @@ const HomePage = () => {
           {timeline.map((item) => (
             <li
               key={item.key}
-              className="md:grid md:grid-cols-[5rem_8.5rem_1fr] md:gap-x-6"
+              className="md:grid md:grid-cols-[5rem_4rem_1fr] md:gap-x-6"
             >
-              <div className="whitespace-nowrap text-[13px] tabular-nums text-ink-faint md:pt-1">
+              <div className="whitespace-nowrap text-[13px] tabular-nums text-ink-faint md:pt-1.5">
                 {item.period}
               </div>
               <a
@@ -108,15 +106,14 @@ const HomePage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={item.name}
-                className="mt-3 flex h-9 items-center transition-opacity duration-150 hover:opacity-60 md:mt-0"
+                className="mt-3 flex h-11 w-11 items-center justify-center transition-opacity duration-150 hover:opacity-60 md:mt-0"
               >
                 <img
                   src={item.logo}
                   alt={item.name}
                   width={item.logoWidth}
                   height={item.logoHeight}
-                  style={{ height: item.displayHeight }}
-                  className="w-auto"
+                  className="h-full w-full object-contain"
                 />
               </a>
               <div className="mt-3 md:mt-0">

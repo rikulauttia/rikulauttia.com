@@ -20,9 +20,8 @@
       "institution": "Aalto University",
       "url": "https://www.aalto.fi/fi/koulutustarjonta/machine-learning-data-science-and-artificial-intelligence-master-of-science-technology",
       "logo": "/images/logos/aalto.webp",
-      "logoWidth": 86,
-      "logoHeight": 64,
-      "displayHeight": 26
+      "logoWidth": 128,
+      "logoHeight": 128
     },
     {
       "period": "2023–2026",
@@ -32,9 +31,8 @@
       "url": "https://www.utu.fi/en",
       "thesis": "The Role of Artificial Intelligence in Analyzing Large Datasets and Its Utilization in Commercial Decision-Making",
       "logo": "/images/logos/turku.webp",
-      "logoWidth": 56,
-      "logoHeight": 64,
-      "displayHeight": 30
+      "logoWidth": 128,
+      "logoHeight": 128
     }
   ],
   "social": [

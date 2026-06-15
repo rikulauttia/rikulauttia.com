@@ -12,9 +12,8 @@
       "description": "broadband access-network systems — scalable components, performance improvements, testing, and CI/CD.",
       "url": "https://www.teleste.com",
       "logo": "/images/logos/teleste.webp",
-      "logoWidth": 521,
-      "logoHeight": 64,
-      "displayHeight": 16
+      "logoWidth": 128,
+      "logoHeight": 128
     },
     {
       "id": "since-ai",
@@ -24,9 +23,8 @@
       "description": "building a global, execution-focused AI innovation ecosystem — bringing together developers, researchers, founders, investors, and industry partners to turn frontier AI into real products, pilots, and companies.",
       "url": "https://sinceai.ai/",
       "logo": "/images/logos/since-ai.webp",
-      "logoWidth": 41,
-      "logoHeight": 64,
-      "displayHeight": 28
+      "logoWidth": 128,
+      "logoHeight": 128
     },
     {
       "id": "root",
@@ -36,9 +34,8 @@
       "description": "Europe's premier innovative recruiting event, connecting top talent with leading global technology companies.",
       "url": "https://rootexpo.fi/",
       "logo": "/images/logos/root.webp",
-      "logoWidth": 240,
-      "logoHeight": 64,
-      "displayHeight": 18
+      "logoWidth": 128,
+      "logoHeight": 128
     },
     {
       "id": "kolt",
@@ -48,9 +45,8 @@
       "description": "automation solutions for complex operational challenges through advanced technology integration — robust platforms across multiple technical domains for mission-critical applications.",
       "url": "https://kolt.fi/",
       "logo": "/images/logos/kolt.webp",
-      "logoWidth": 185,
-      "logoHeight": 64,
-      "displayHeight": 22
+      "logoWidth": 128,
+      "logoHeight": 128
     },
     {
       "id": "attractor",
@@ -60,9 +56,8 @@
       "description": "a technology consultancy building production-grade software, applied AI, and security-first systems — client discovery, scoping, proposals, and partnerships, alongside hands-on AI implementation and solution architecture.",
       "url": "https://attractor.fi/",
       "logo": "/images/logos/attractor.webp",
-      "logoWidth": 60,
-      "logoHeight": 64,
-      "displayHeight": 28
+      "logoWidth": 128,
+      "logoHeight": 128
     }
   ]
 }
