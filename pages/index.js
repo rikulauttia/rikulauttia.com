@@ -129,10 +129,8 @@ const HomePage = () => {
 
       {/* About */}
       <section id="about" className="wrap scroll-mt-20 py-12 md:py-16">
-        <h2 className="text-[13px] font-normal lowercase tracking-wide text-ink">
-          about
-        </h2>
-        <div className="mt-4 max-w-prose space-y-5 font-normal text-ink">
+        <h2 className="text-2xl tracking-tight md:text-[28px]">About</h2>
+        <div className="mt-6 max-w-prose space-y-5 font-normal text-ink">
           {about.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
