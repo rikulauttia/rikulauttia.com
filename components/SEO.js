@@ -104,25 +104,42 @@ export const getPersonSchema = (profile) => ({
   'description': profile.description,
 });
 
-export const getArticleSchema = (article, author = 'Riku Lauttia') => ({
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  'headline': article.title,
-  'url': `https://rikulauttia.com/writing/${article.slug}`,
-  'author': {
-    '@type': 'Person',
-    'name': author,
-    'url': 'https://rikulauttia.com/',
-  },
-  'publisher': {
-    '@type': 'Person',
-    'name': author,
-    'url': 'https://rikulauttia.com/',
-  },
-  'description': article.title,
-  'articleSection': article.category,
-  'keywords': article.tags?.join(', '),
-});
+export const getArticleSchema = (article, author = 'Riku Lauttia') => {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'headline': article.title,
+    'url': `https://rikulauttia.com/writing/${article.slug}`,
+    'mainEntityOfPage': {
+      '@type': 'WebPage',
+      '@id': `https://rikulauttia.com/writing/${article.slug}`,
+    },
+    'author': {
+      '@type': 'Person',
+      'name': author,
+      'url': 'https://rikulauttia.com/',
+    },
+    'publisher': {
+      '@type': 'Person',
+      'name': author,
+      'url': 'https://rikulauttia.com/',
+    },
+    'description': article.excerpt || article.title,
+    'articleSection': article.category,
+    'keywords': article.tags?.join(', '),
+  };
+
+  if (article.publishedDate && article.publishedDate !== 'TODO') {
+    schema.datePublished = article.publishedDate;
+    schema.dateModified = article.publishedDate;
+  }
+
+  if (article.image && article.image.startsWith('/')) {
+    schema.image = `https://rikulauttia.com${article.image}`;
+  }
+
+  return schema;
+};
 
 export const getBreadcrumbs = (path, label) => {
   const breadcrumbs = [{ name: 'Home', url: 'https://rikulauttia.com/' }];
