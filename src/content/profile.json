@@ -2,141 +2,55 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Profile",
   "description": "Personal profile information for Riku Lauttia",
-  "type": "object",
   "personal": {
     "name": "Riku Lauttia",
-    "tagline": "AI Engineer & Founder",
-    "bio": "AI engineer and founder building production AI systems, software infrastructure, and AI-native technology ventures.",
-    "bioLong": "I am an AI engineer and founder working at the intersection of machine learning, software infrastructure, and venture building. My work focuses on turning technical ideas into production systems, companies, and communities. I am especially interested in AI systems that create measurable value in real operational environments — not just demos or prototypes. I have founded and co-founded several technology initiatives across AI, automation, recruiting, and software consulting. Alongside company building, I work on production AI systems and continue to deepen my technical foundation in machine learning, data systems, and infrastructure. I study Machine Learning, Data Science and Artificial Intelligence at Aalto University. The long-term goal is simple: build useful AI systems, strong technology companies, and globally relevant technical work.",
     "email": "riku@lauttia.com",
-    "availability": {
-      "status": "available",
-      "forConsulting": true,
-      "forPartnerships": true,
-      "message": "Available for AI systems, software, partnerships, and company-building discussions."
-    }
+    "intro": "Building intelligent systems at the intersection of AI, software, product development, and business.",
+    "description": "Riku Lauttia works at the intersection of AI engineering, software engineering, commercial strategy, and product development."
   },
+  "about": [
+    "Riku Lauttia is focused on building intelligent systems that shape the future of technology and business. He works at the intersection of AI engineering, commercial strategy, and product development.",
+    "With a background in business, software engineering, and applied AI, Riku combines deep technical expertise with strong commercial acumen."
+  ],
   "education": [
     {
-      "institution": "Aalto University",
-      "degree": "Master of Science",
+      "period": "2026–2028",
+      "degree": "MSc",
       "field": "Machine Learning, Data Science and Artificial Intelligence",
-      "url": "https://www.aalto.fi"
-    }
-  ],
-  "certifications": [
-    {
-      "name": "AWS Certified Cloud Practitioner",
-      "issuer": "Amazon Web Services",
-      "date": "March 2025",
-      "credentialUrl": "https://www.credly.com/badges/28a5319a-2126-42fd-b607-5c6772c7745e/public_url"
+      "institution": "Aalto University",
+      "url": "https://www.aalto.fi/fi/koulutustarjonta/machine-learning-data-science-and-artificial-intelligence-master-of-science-technology",
+      "logo": "/images/logos/aalto.webp",
+      "logoWidth": 128,
+      "logoHeight": 128
     },
     {
-      "name": "Full Stack Open",
-      "issuer": "University of Helsinki",
-      "date": "November 2024",
-      "credentialUrl": "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/cb1bea9373697a44f69e6f7a20726896"
+      "period": "2023–2026",
+      "degree": "BSc",
+      "field": "Information and Communication Technology",
+      "institution": "University of Turku",
+      "url": "https://www.utu.fi/en",
+      "thesis": "The Role of Artificial Intelligence in Analyzing Large Datasets and Its Utilization in Commercial Decision-Making",
+      "logo": "/images/logos/turku.webp",
+      "logoWidth": 128,
+      "logoHeight": 128
     }
   ],
-  "skills": {
-    "categories": [
-      {
-        "name": "AI & Machine Learning",
-        "skills": [
-          "Machine Learning",
-          "Deep Learning",
-          "Neural Networks",
-          "Computer Vision",
-          "Natural Language Processing",
-          "MLOps & AI Infrastructure"
-        ]
-      },
-      {
-        "name": "Software Engineering",
-        "skills": [
-          "Python, C++ & JavaScript",
-          "React & Full-Stack Development",
-          "Cloud Infrastructure (AWS)",
-          "Microservices & System Design",
-          "DevOps & CI/CD",
-          "Data Systems"
-        ]
-      },
-      {
-        "name": "Founder & Operator",
-        "skills": [
-          "Company Building",
-          "Strategic Partnerships",
-          "Product Strategy",
-          "Technical Architecture",
-          "Team Leadership",
-          "Business Development"
-        ]
-      }
-    ]
-  },
   "social": [
     {
       "platform": "LinkedIn",
-      "url": "https://www.linkedin.com/in/rikulauttia",
-      "username": "rikulauttia"
+      "url": "https://www.linkedin.com/in/rikulauttia"
     },
     {
       "platform": "GitHub",
-      "url": "https://github.com/rikulauttia",
-      "username": "rikulauttia"
+      "url": "https://github.com/rikulauttia"
     },
     {
-      "platform": "X (Twitter)",
-      "url": "https://x.com/rikulauttia",
-      "username": "rikulauttia"
+      "platform": "X",
+      "url": "https://x.com/rikulauttia"
     },
     {
-      "platform": "Facebook",
-      "url": "https://www.facebook.com/rikulauttia/",
-      "username": "rikulauttia"
-    },
-    {
-      "platform": "Substack",
-      "url": "https://substack.com/@rikulauttia",
-      "username": "rikulauttia"
-    },
-    {
-      "platform": "Instagram",
-      "url": "https://www.instagram.com/rikulauttia/",
-      "username": "rikulauttia"
-    },
-    {
-      "platform": "TikTok",
-      "url": "https://www.tiktok.com/@rikulauttia",
-      "username": "rikulauttia"
-    },
-    {
-      "platform": "YouTube",
-      "url": "https://www.youtube.com/@rikulauttia",
-      "username": "rikulauttia"
-    },
-    {
-      "platform": "Medium",
-      "url": "https://medium.com/@rikulauttia",
-      "username": "rikulauttia"
+      "platform": "Email",
+      "url": "mailto:riku@lauttia.com"
     }
-  ],
-  "meta": {
-    "seo": {
-      "title": "Riku Lauttia — AI Engineer & Founder",
-      "description": "Riku Lauttia is an AI engineer and founder focused on production AI systems, machine learning, software infrastructure, automation, and AI-native ventures.",
-      "keywords": [
-        "AI Engineer",
-        "Artificial Intelligence",
-        "Machine Learning",
-        "Founder",
-        "Production AI",
-        "Software Infrastructure",
-        "Automation",
-        "AI Systems"
-      ]
-    },
-    "lastUpdated": "2026-05-01"
-  }
+  ]
 }

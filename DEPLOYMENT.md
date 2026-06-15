@@ -158,11 +158,10 @@ curl -I https://rikulauttia.com
 curl -I https://rikulauttia.com
 # Should redirect to HTTPS if needed
 
-# 4. Test specific pages
+# 4. Test the homepage, writing archive, and a redirect
 open https://rikulauttia.com
-open https://rikulauttia.com/about
 open https://rikulauttia.com/writing
-open https://rikulauttia.com/now
+open https://rikulauttia.com/about   # should redirect to /#about
 
 # 5. Check sitemap
 open https://rikulauttia.com/sitemap.xml
