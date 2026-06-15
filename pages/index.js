@@ -36,10 +36,6 @@ const HomePage = () => {
             <h1 className="text-[2.6rem] leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
               Riku Lauttia
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-ink-muted md:text-xl">
-              Building intelligent systems at the intersection of AI, software,
-              product development, and business.
-            </p>
             <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[15px]">
               {introLinks.map((link) => (
                 <li key={link.name}>
