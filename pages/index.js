@@ -28,13 +28,21 @@ const HomePage = () => {
       <SEO jsonLd={getPersonSchema(profile)} />
 
       {/* Introduction */}
-      <section className="wrap pt-16 pb-20 md:pt-24 md:pb-28">
-        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-16">
-          <div className="max-w-prose">
-            <h1 className="text-[2.6rem] leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
+      <section className="wrap pt-14 pb-12 md:pt-20 md:pb-16">
+        <div className="flex items-center justify-center gap-5 sm:gap-7">
+          <img
+            src="/images/riku-lauttia.webp"
+            alt="Riku Lauttia"
+            width="600"
+            height="600"
+            className="h-24 w-24 shrink-0 rounded-full object-cover sm:h-32 sm:w-32 md:h-40 md:w-40"
+          />
+
+          <div>
+            <h1 className="text-3xl tracking-tight sm:text-4xl md:text-5xl">
               Riku Lauttia
             </h1>
-            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[15px]">
+            <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-[15px]">
               {introLinks.map((link) => (
                 <li key={link.name}>
                   <a
@@ -53,14 +61,6 @@ const HomePage = () => {
               ))}
             </ul>
           </div>
-
-          <img
-            src="/images/riku-lauttia.webp"
-            alt="Riku Lauttia"
-            width="600"
-            height="600"
-            className="w-[150px] shrink-0 sm:w-[170px] md:w-[200px]"
-          />
         </div>
       </section>
 
