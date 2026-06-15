@@ -11,8 +11,12 @@ export const getSocialLinks = () => profileData.social;
 // Selected work
 export const getWork = () => rolesData.roles;
 
-// Writing
-export const getArticles = () => writingData.articles;
-export const getFeaturedArticles = () => writingData.articles.filter((a) => a.featured);
+// Writing (newest first)
+const byNewest = (a, b) =>
+  new Date(b.publishedDate) - new Date(a.publishedDate);
+
+export const getArticles = () => [...writingData.articles].sort(byNewest);
+export const getFeaturedArticles = () =>
+  getArticles().filter((a) => a.featured);
 export const getArticleBySlug = (slug) =>
   writingData.articles.find((article) => article.slug === slug);

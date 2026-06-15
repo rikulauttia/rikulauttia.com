@@ -35,6 +35,16 @@ export default function Writing() {
                   </span>
                   <span className="mt-1 block text-[14px] text-ink-faint">
                     {article.category}
+                    {article.publishedDate &&
+                      article.publishedDate !== 'TODO' && (
+                        <>
+                          {' · '}
+                          {new Date(article.publishedDate).toLocaleDateString(
+                            'en-US',
+                            { year: 'numeric', month: 'short' }
+                          )}
+                        </>
+                      )}
                   </span>
                 </span>
                 <span

@@ -52,6 +52,84 @@
   .link:hover {
     @apply decoration-ink;
   }
+
+  /* Self-hosted article body */
+  .article-body {
+    @apply text-ink;
+  }
+
+  .article-body > * + * {
+    margin-top: 1.25em;
+  }
+
+  .article-body p {
+    @apply text-ink;
+  }
+
+  .article-body h2 {
+    @apply text-xl font-semibold tracking-tight md:text-2xl;
+    margin-top: 2em;
+  }
+
+  .article-body h3 {
+    @apply text-lg font-semibold tracking-tight;
+    margin-top: 1.6em;
+  }
+
+  .article-body ul,
+  .article-body ol {
+    padding-left: 1.4em;
+  }
+
+  .article-body ul {
+    list-style: disc;
+  }
+
+  .article-body ol {
+    list-style: decimal;
+  }
+
+  .article-body li + li {
+    margin-top: 0.4em;
+  }
+
+  /* Substack wraps list-item text in <p>; keep it tight */
+  .article-body li > p {
+    margin: 0;
+  }
+
+  .article-body a {
+    @apply underline decoration-line decoration-1 underline-offset-[3px] transition-colors duration-150;
+  }
+
+  .article-body a:hover {
+    @apply decoration-ink;
+  }
+
+  .article-body strong {
+    @apply font-semibold;
+  }
+
+  .article-body blockquote {
+    @apply border-l-2 border-line pl-4 italic text-ink-muted;
+  }
+
+  .article-body figure {
+    margin-top: 1.5em;
+  }
+
+  .article-body img {
+    @apply w-full;
+    height: auto;
+  }
+
+  .article-body figcaption {
+    @apply mt-2 text-center text-[14px] text-ink-faint;
+  }
+
+  .article-body hr {
+    @apply my-8 border-line;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
