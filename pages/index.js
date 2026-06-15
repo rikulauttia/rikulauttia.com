@@ -32,7 +32,6 @@ const HomePage = () => {
       logoHeight: item.logoHeight,
       name: item.name,
       url: item.url,
-      role: item.role,
       description: item.description,
     })),
     ...education.map((item) => ({
@@ -43,8 +42,7 @@ const HomePage = () => {
       logoHeight: item.logoHeight,
       name: item.institution,
       url: item.url,
-      role: item.degree,
-      description: `${item.field}, ${item.institution}`,
+      description: `${item.degree} in ${item.field} at ${item.institution}.`,
       thesis: item.thesis,
     })),
   ];
@@ -117,11 +115,9 @@ const HomePage = () => {
                 />
               </a>
               <div className="mt-3 md:mt-0">
-                <p className="max-w-prose text-ink-muted">
-                  <span className="text-ink">{item.role}</span> — {item.description}
-                </p>
+                <p className="max-w-prose font-normal text-ink">{item.description}</p>
                 {item.thesis && (
-                  <p className="mt-1.5 max-w-prose text-[14px] text-ink-faint">
+                  <p className="mt-1.5 max-w-prose font-normal text-ink">
                     Thesis: {item.thesis}
                   </p>
                 )}
