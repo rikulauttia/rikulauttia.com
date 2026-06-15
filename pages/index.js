@@ -16,11 +16,6 @@ const introLinks = [
   { name: 'Email', href: 'mailto:riku@lauttia.com' },
 ];
 
-const contactLinks = [
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/rikulauttia' },
-  { name: 'GitHub', href: 'https://github.com/rikulauttia' },
-  { name: 'X', href: 'https://x.com/rikulauttia' },
-];
 
 const HomePage = () => {
   const profile = getProfile();
@@ -180,32 +175,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Contact */}
-      <section id="contact" className="wrap scroll-mt-20 py-12 md:py-16">
-        <h2 className="text-2xl tracking-tight md:text-[28px]">Contact</h2>
-        <div className="mt-6 max-w-prose space-y-4 text-ink-muted">
-          <p>Work, research, and collaboration.</p>
-          <p>
-            <a href="mailto:riku@lauttia.com" className="link">
-              riku@lauttia.com
-            </a>
-          </p>
-          <ul className="flex flex-wrap gap-x-6 gap-y-2">
-            {contactLinks.map((link) => (
-              <li key={link.name}>
-                <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link"
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
     </Layout>
   );
 };
