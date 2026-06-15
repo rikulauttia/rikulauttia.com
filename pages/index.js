@@ -162,7 +162,7 @@ const HomePage = () => {
             Education
           </h3>
           <p className="mt-3 text-ink-muted">
-            {education[0].field} &mdash;{' '}
+            {education[0].degree}, {education[0].field} &mdash;{' '}
             <a
               href={education[0].url}
               target="_blank"
