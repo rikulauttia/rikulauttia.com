@@ -81,14 +81,15 @@ const HomePage = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={item.name}
-                  className="inline-block transition-opacity duration-150 hover:opacity-60"
+                  className="flex h-8 items-center transition-opacity duration-150 hover:opacity-60"
                 >
                   <img
                     src={item.logo}
                     alt={item.name}
                     width={item.logoWidth}
                     height={item.logoHeight}
-                    className="h-5 w-auto"
+                    style={{ height: item.displayHeight }}
+                    className="w-auto"
                   />
                 </a>
                 <p className="mt-3 max-w-prose text-ink-muted">
