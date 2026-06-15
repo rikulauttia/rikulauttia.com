@@ -5,7 +5,7 @@ import {
   getAbout,
   getEducation,
   getWork,
-  getFeaturedArticles,
+  getArticles,
 } from '../src/lib/content';
 
 const introLinks = [
@@ -21,7 +21,7 @@ const HomePage = () => {
   const about = getAbout();
   const education = getEducation();
   const work = getWork();
-  const articles = getFeaturedArticles().slice(0, 3);
+  const articles = getArticles();
 
   const timeline = [
     ...work.map((item) => ({
@@ -140,14 +140,14 @@ const HomePage = () => {
       {/* Writing */}
       <section id="writing" className="wrap scroll-mt-20 py-12 md:py-16">
         <h2 className="text-2xl tracking-tight md:text-[28px]">writing</h2>
-        <ul className="mt-8 max-w-prose border-t border-line">
+        <ul className="mt-8 max-w-prose space-y-2">
           {articles.map((article) => (
-            <li key={article.id} className="border-b border-line">
+            <li key={article.id}>
               <a
                 href={`/writing/${article.slug}`}
-                className="group flex items-baseline justify-between gap-4 py-5"
+                className="group flex items-baseline justify-between gap-4 py-2"
               >
-                <span className="font-medium text-ink">{article.title}</span>
+                <span className="font-normal text-ink">{article.title}</span>
                 <span
                   aria-hidden="true"
                   className="shrink-0 text-ink-faint transition-transform duration-150 group-hover:translate-x-0.5"
@@ -158,11 +158,6 @@ const HomePage = () => {
             </li>
           ))}
         </ul>
-        <p className="mt-8">
-          <a href="/writing" className="link">
-            All writing
-          </a>
-        </p>
       </section>
     </Layout>
   );
