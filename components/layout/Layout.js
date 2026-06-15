@@ -1,6 +1,3 @@
-import Header from './Header';
-import Footer from './Footer';
-
 const Layout = ({ children }) => {
   return (
     <div className="flex min-h-screen flex-col">
@@ -10,11 +7,9 @@ const Layout = ({ children }) => {
       >
         Skip to content
       </a>
-      <Header />
       <main id="main" className="flex-1">
         {children}
       </main>
-      <Footer />
     </div>
   );
 };
