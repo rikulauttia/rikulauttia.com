@@ -140,10 +140,7 @@ const HomePage = () => {
       {/* Writing */}
       <section id="writing" className="wrap scroll-mt-20 py-12 md:py-16">
         <h2 className="text-2xl tracking-tight md:text-[28px]">Writing</h2>
-        <p className="mt-2 max-w-prose text-ink-muted">
-          Notes on AI, software, systems, and technology.
-        </p>
-        <ul className="mt-10 max-w-prose border-t border-line">
+        <ul className="mt-8 max-w-prose border-t border-line">
           {articles.map((article) => (
             <li key={article.id} className="border-b border-line">
               <a
