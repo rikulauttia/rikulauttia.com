@@ -23,6 +23,34 @@ const HomePage = () => {
   const work = getWork();
   const articles = getFeaturedArticles().slice(0, 3);
 
+  const timeline = [
+    ...work.map((item) => ({
+      key: item.id,
+      period: item.period,
+      logo: item.logo,
+      logoWidth: item.logoWidth,
+      logoHeight: item.logoHeight,
+      displayHeight: item.displayHeight,
+      name: item.name,
+      url: item.url,
+      role: item.role,
+      description: item.description,
+    })),
+    ...education.map((item) => ({
+      key: item.field,
+      period: item.period,
+      logo: item.logo,
+      logoWidth: item.logoWidth,
+      logoHeight: item.logoHeight,
+      displayHeight: item.displayHeight,
+      name: item.institution,
+      url: item.url,
+      role: item.degree,
+      description: `${item.field}, ${item.institution}`,
+      thesis: item.thesis,
+    })),
+  ];
+
   return (
     <Layout>
       <SEO jsonLd={getPersonSchema(profile)} />
@@ -64,37 +92,42 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Experience */}
+      {/* Experience & education */}
       <section id="work" className="wrap scroll-mt-20 pb-12 md:pb-16">
-        <ul className="border-t border-line">
-          {work.map((item) => (
+        <ul className="space-y-10 md:space-y-11">
+          {timeline.map((item) => (
             <li
-              key={item.id}
-              className="border-b border-line py-6 md:grid md:grid-cols-[5rem_1fr] md:gap-8"
+              key={item.key}
+              className="md:grid md:grid-cols-[5rem_8.5rem_1fr] md:gap-x-6"
             >
-              <div className="mb-2 text-[15px] tabular-nums text-ink-faint md:mb-0 md:pt-0.5">
+              <div className="whitespace-nowrap text-[13px] tabular-nums text-ink-faint md:pt-1">
                 {item.period}
               </div>
-              <div>
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={item.name}
-                  className="flex h-8 items-center transition-opacity duration-150 hover:opacity-60"
-                >
-                  <img
-                    src={item.logo}
-                    alt={item.name}
-                    width={item.logoWidth}
-                    height={item.logoHeight}
-                    style={{ height: item.displayHeight }}
-                    className="w-auto"
-                  />
-                </a>
-                <p className="mt-3 max-w-prose text-ink-muted">
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={item.name}
+                className="mt-3 flex h-9 items-center transition-opacity duration-150 hover:opacity-60 md:mt-0"
+              >
+                <img
+                  src={item.logo}
+                  alt={item.name}
+                  width={item.logoWidth}
+                  height={item.logoHeight}
+                  style={{ height: item.displayHeight }}
+                  className="w-auto"
+                />
+              </a>
+              <div className="mt-3 md:mt-0">
+                <p className="max-w-prose text-ink-muted">
                   <span className="text-ink">{item.role}</span> — {item.description}
                 </p>
+                {item.thesis && (
+                  <p className="mt-1.5 max-w-prose text-[14px] text-ink-faint">
+                    Thesis: {item.thesis}
+                  </p>
+                )}
               </div>
             </li>
           ))}
@@ -139,37 +172,6 @@ const HomePage = () => {
           {about.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
-        </div>
-
-        <div className="mt-10 max-w-prose">
-          <h3 className="text-[13px] font-medium uppercase tracking-wider text-ink-faint">
-            Education
-          </h3>
-          <ul className="mt-4 space-y-5">
-            {education.map((item) => (
-              <li key={item.field}>
-                <div className="text-ink">
-                  {item.degree} {item.field}
-                </div>
-                <div className="mt-0.5 text-[15px] text-ink-faint">
-                  {item.period} &middot;{' '}
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link"
-                  >
-                    {item.institution}
-                  </a>
-                </div>
-                {item.thesis && (
-                  <div className="mt-1.5 text-[14px] text-ink-faint">
-                    Thesis: {item.thesis}
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
