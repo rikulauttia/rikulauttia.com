@@ -1,9 +1,12 @@
 import Head from 'next/head';
 
+const DEFAULT_DESCRIPTION =
+  'Riku Lauttia works at the intersection of AI engineering, software engineering, commercial strategy, and product development.';
+
 const SEO = ({
-  title = 'Riku Lauttia — AI Engineer & Founder',
-  description = 'Riku Lauttia is an AI engineer and founder focused on production AI systems, machine learning, software infrastructure, automation, and AI-native ventures.',
-  canonical = 'https://rikulauttia.com',
+  title = 'Riku Lauttia',
+  description = DEFAULT_DESCRIPTION,
+  canonical = 'https://rikulauttia.com/',
   ogImage = 'https://rikulauttia.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
@@ -42,11 +45,6 @@ const SEO = ({
       {/* Additional Meta Tags */}
       <meta name="author" content="Riku Lauttia" />
       <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
-
-      {/* Performance hints */}
-      <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 
       {/* JSON-LD Structured Data */}
       {jsonLd && (
@@ -82,9 +80,8 @@ export const getPersonSchema = (profile) => ({
   '@context': 'https://schema.org',
   '@type': 'Person',
   'name': profile.name,
-  'url': 'https://rikulauttia.com',
+  'url': 'https://rikulauttia.com/',
   'image': 'https://rikulauttia.com/og-image.jpg',
-  'jobTitle': 'AI Engineer & Founder',
   'email': profile.email,
   'alumniOf': {
     '@type': 'Organization',
@@ -95,39 +92,40 @@ export const getPersonSchema = (profile) => ({
     'Artificial Intelligence',
     'Machine Learning',
     'Software Engineering',
+    'Product Development',
     'Data Systems',
-    'Automation',
-    'AI Infrastructure',
-    'Technology Entrepreneurship',
+    'Cloud Infrastructure',
   ],
-  'description': profile.bio,
+  'sameAs': [
+    'https://www.linkedin.com/in/rikulauttia',
+    'https://github.com/rikulauttia',
+    'https://x.com/rikulauttia',
+  ],
+  'description': profile.description,
 });
 
 export const getArticleSchema = (article, author = 'Riku Lauttia') => ({
   '@context': 'https://schema.org',
   '@type': 'Article',
   'headline': article.title,
-  'url': article.url,
+  'url': `https://rikulauttia.com/writing/${article.slug}`,
   'author': {
     '@type': 'Person',
     'name': author,
-    'url': 'https://rikulauttia.com',
+    'url': 'https://rikulauttia.com/',
   },
   'publisher': {
     '@type': 'Person',
     'name': author,
-    'url': 'https://rikulauttia.com',
+    'url': 'https://rikulauttia.com/',
   },
-  'datePublished': article.publishedDate,
-  'description': article.excerpt || article.title,
+  'description': article.title,
   'articleSection': article.category,
   'keywords': article.tags?.join(', '),
 });
 
 export const getBreadcrumbs = (path, label) => {
-  const breadcrumbs = [
-    { name: 'Home', url: 'https://rikulauttia.com' },
-  ];
+  const breadcrumbs = [{ name: 'Home', url: 'https://rikulauttia.com/' }];
 
   if (path !== '/') {
     breadcrumbs.push({

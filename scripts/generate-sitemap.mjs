@@ -41,15 +41,10 @@ function formatUrl(path) {
   return TRAILING_SLASH && path !== '/' ? `${url}/` : url;
 }
 
-// Static pages
+// Static pages (about/work/projects/contact/now are redirect-only and excluded)
 const staticPages = [
   { path: '/', changefreq: 'weekly', priority: '1.0' },
-  { path: '/about', changefreq: 'monthly', priority: '0.9' },
-  { path: '/work', changefreq: 'monthly', priority: '0.8' },
-  { path: '/projects', changefreq: 'monthly', priority: '0.8' },
   { path: '/writing', changefreq: 'weekly', priority: '0.8' },
-  { path: '/now', changefreq: 'weekly', priority: '0.8' },
-  { path: '/contact', changefreq: 'yearly', priority: '0.7' },
 ];
 
 // Read writing articles from JSON

@@ -1,96 +1,47 @@
-# Riku Lauttia — AI Engineer & Founder
+# Riku Lauttia
 
-> AI engineer and founder building production AI systems, software infrastructure, and AI-native technology ventures.
+> Riku Lauttia works at the intersection of AI engineering, software engineering, commercial strategy, and product development.
 
 ## Overview
 
-Riku Lauttia is an AI engineer and founder focused on production AI systems, machine learning, software infrastructure, automation, and AI-native ventures. Currently building at the intersection of technical systems and company building.
+Riku Lauttia builds intelligent systems at the intersection of AI, software, product development, and business.
 
 - Email: riku@lauttia.com
-- Status: Available for consulting and partnerships
-- Website: https://rikulauttia.com
+- Website: https://rikulauttia.com/
 
-## Key Pages
+## Pages
 
 ### Homepage
-https://rikulauttia.com
-Overview of current work, selected ventures, writing, and contact.
-
-### About
-https://rikulauttia.com/about
-Background, education (Aalto University — MSc Machine Learning, Data Science and AI), expertise, and certifications.
-
-### Work Experience
-https://rikulauttia.com/work
-Professional experience including:
-- Software Engineer at Teleste (April 2025 - Present)
-- Co-Founder at Since AI (January 2025 - Present)
-- Co-Founder at Root (January 2025 - Present)
-- Co-Founder at Kolt (July 2024 - Present)
-- Co-Founder at Attractor (October 2025 - Present)
-- Partnerships Lead at Boost Turku (January 2025 - December 2025)
-- Technical Solutions Specialist at VSP (January 2023 - May 2023)
-
-### Projects
-https://rikulauttia.com/projects
-Active ventures:
-- Since AI: AI community and innovation platform connecting builders, companies, research, and capital
-- Root: Recruitment and talent platform connecting ambitious technology talent with companies
-- Kolt: Automation and operational technology company focused on practical business workflows
-- Attractor: Technology consultancy building production-grade software, automation, and AI systems
+https://rikulauttia.com/
+Introduction, selected work, writing, about, and contact.
 
 ### Writing
 https://rikulauttia.com/writing
-Notes on AI, software, systems, and company building:
-- "Selling AI Without the Hype: A Playbook for Turning Interest Into Partnerships"
-- "AI at the Edge: Why Hardware and Embedded AI Will Decide the Next Decade"
-- "From San Francisco to Europe: The 2025 Playbook for Building Agentic AI That Scales"
-- "A Social Contract for AI"
-- "Europe Must Stay Hungry: Why the Next Decade of AI Will Be Decided Here"
+Notes on AI, software, systems, and technology.
 
-### Contact
-https://rikulauttia.com/contact
-Email: riku@lauttia.com
-Social: LinkedIn, GitHub, X (Twitter)
+## Selected work
 
-### Now
-https://rikulauttia.com/now
-Current focus areas and priorities (updated regularly).
+- Teleste — Software engineering for broadband access-network systems, including scalable components, performance improvements, testing, and CI/CD.
+- Since AI — AI community and innovation platform connecting builders, companies, research, and capital through practical technology programs.
+- Root — Platform and event concept connecting ambitious technology talent with companies.
+- Kolt — Technology focused on automation, operational workflows, and practical software systems.
+- Attractor — Production software, AI systems, and automation developed around concrete business needs.
 
-## Expertise
+## Focus areas
 
-### AI & Machine Learning
-Machine Learning, Deep Learning, Neural Networks, Computer Vision, Natural Language Processing, MLOps & AI Infrastructure
-
-### Software Engineering
-Python, C++, JavaScript, React, Full-Stack Development, Cloud Infrastructure (AWS), Microservices & System Design, DevOps & CI/CD, Data Systems
-
-### Founder & Operator
-Company Building, Strategic Partnerships, Product Strategy, Technical Architecture, Team Leadership, Business Development
+- AI and machine learning
+- Software engineering
+- Product development
+- Data and cloud systems
+- Technology and commercial strategy
 
 ## Education
 
-- Aalto University — MSc Machine Learning, Data Science and Artificial Intelligence
+- Machine Learning, Data Science and Artificial Intelligence — Aalto University
 
-## Certifications
-
-- AWS Certified Cloud Practitioner (March 2025)
-- Full Stack Open — University of Helsinki (November 2024)
-
-## Social Links
+## Links
 
 - LinkedIn: https://www.linkedin.com/in/rikulauttia
 - GitHub: https://github.com/rikulauttia
-- X (Twitter): https://x.com/rikulauttia
-- Substack: https://substack.com/@rikulauttia
-- Medium: https://medium.com/@rikulauttia
-
-## Availability
-
-Available for AI systems, software, partnerships, and company-building discussions.
-
-For inquiries: riku@lauttia.com
-
----
-
-Last updated: 2026-05-01
+- X: https://x.com/rikulauttia
+- Email: riku@lauttia.com

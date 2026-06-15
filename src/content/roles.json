@@ -1,117 +1,58 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Professional Roles",
-  "description": "Work experience and professional roles",
+  "title": "Selected Work",
+  "description": "Selected work across software, AI, products, and technology organizations",
   "type": "array",
   "roles": [
     {
-      "id": "sinceai-cofounder",
-      "title": "Co-Founder",
-      "company": {
-        "name": "Since AI",
-        "url": "https://sinceai.ai/",
-        "description": "AI community and innovation platform"
-      },
-      "type": "founder",
-      "startDate": "2025-01",
-      "endDate": null,
-      "current": true,
-      "description": "Co-founded AI community and innovation platform. Secured partnerships with technology companies. Built community around applied AI development and builder programs.",
-      "highlights": [
-        "Co-founded AI community and innovation platform",
-        "Secured strategic partnerships with technology companies",
-        "Designed hackathon and builder programs",
-        "Built engaged community around applied AI"
-      ],
-      "technologies": []
+      "id": "teleste",
+      "name": "Teleste",
+      "area": "Software engineering",
+      "description": "Software engineering for broadband access-network systems, including scalable components, performance improvements, testing, and CI/CD.",
+      "url": "https://www.teleste.com",
+      "logo": "/images/logos/teleste.webp",
+      "logoWidth": 521,
+      "logoHeight": 64
     },
     {
-      "id": "root-cofounder",
-      "title": "Co-Founder",
-      "company": {
-        "name": "Root",
-        "url": "https://rootexpo.fi/",
-        "description": "Recruitment and talent platform"
-      },
-      "type": "founder",
-      "startDate": "2025-01",
-      "endDate": null,
-      "current": true,
-      "description": "Co-founded recruitment and talent platform connecting ambitious technology talent with companies. 1000+ participants. Partnered with technology companies and industry speakers.",
-      "highlights": [
-        "Co-founded recruitment and talent platform",
-        "Built partnerships with technology companies",
-        "Facilitated networking for 1000+ participants",
-        "Curated industry speakers and programming"
-      ],
-      "technologies": []
+      "id": "since-ai",
+      "name": "Since AI",
+      "area": "AI community and innovation",
+      "description": "AI community and innovation platform connecting builders, companies, research, and capital through practical technology programs.",
+      "url": "https://sinceai.ai/",
+      "logo": "/images/logos/since-ai.webp",
+      "logoWidth": 41,
+      "logoHeight": 64
     },
     {
-      "id": "kolt-cofounder",
-      "title": "Co-Founder",
-      "company": {
-        "name": "Kolt",
-        "url": "https://kolt.fi/",
-        "description": "Automation and operational technology"
-      },
-      "type": "founder",
-      "startDate": "2024-07",
-      "endDate": null,
-      "current": true,
-      "description": "Co-founded automation company solving operational challenges. Led product development and technical architecture. Built scalable backend infrastructure. Directed R&D and market validation.",
-      "highlights": [
-        "Co-founded automation solutions company",
-        "Led product development across technical domains",
-        "Designed scalable backend infrastructure",
-        "Directed R&D initiatives and technology evaluation"
-      ],
-      "technologies": []
+      "id": "root",
+      "name": "Root",
+      "area": "Technology talent and recruitment",
+      "description": "Platform and event concept connecting ambitious technology talent with companies.",
+      "url": "https://rootexpo.fi/",
+      "logo": "/images/logos/root.webp",
+      "logoWidth": 240,
+      "logoHeight": 64
     },
     {
-      "id": "attractor-cofounder",
-      "title": "Co-Founder",
-      "company": {
-        "name": "Attractor",
-        "url": "https://attractor.fi/",
-        "description": "Technology consultancy building production-grade software, AI, and automation systems"
-      },
-      "type": "founder",
-      "startDate": "2025-10",
-      "endDate": null,
-      "current": true,
-      "description": "Co-founded technology consultancy for production software and AI systems. Led client discovery, scoping, and partnerships. Built AI solutions focused on measurable value. Created service offerings and go-to-market strategy.",
-      "highlights": [
-        "Co-founded technology consultancy",
-        "Led client discovery, scoping, and partnerships",
-        "Contributed to AI implementation and solution architecture",
-        "Built service offerings and go-to-market strategy"
-      ],
-      "technologies": [
-        "AI/ML",
-        "Production Software",
-        "Automation"
-      ]
+      "id": "kolt",
+      "name": "Kolt",
+      "area": "Automation and operational technology",
+      "description": "Technology focused on automation, operational workflows, and practical software systems.",
+      "url": "https://kolt.fi/",
+      "logo": "/images/logos/kolt.webp",
+      "logoWidth": 185,
+      "logoHeight": 64
     },
     {
-      "id": "teleste-software-engineer",
-      "title": "Software Engineer",
-      "company": {
-        "name": "Teleste",
-        "url": "https://www.teleste.com",
-        "description": "Broadband network solutions and video technology"
-      },
-      "type": "full-time",
-      "startDate": "2025-04",
-      "endDate": null,
-      "current": true,
-      "description": "Software engineer on broadband R&D team. Building scalable components for access-network solutions. Optimized caching systems to reduce configuration latency. Created testing frameworks and CI/CD improvements. Systems serve millions of broadband users globally.",
-      "highlights": [
-        "Built scalable software components for access-network solutions",
-        "Optimized caching systems reducing configuration latency",
-        "Created testing frameworks and QA processes",
-        "Contributed to CI/CD pipeline optimization"
-      ],
-      "technologies": []
+      "id": "attractor",
+      "name": "Attractor",
+      "area": "Software, AI, and automation",
+      "description": "Production software, AI systems, and automation developed around concrete business needs.",
+      "url": "https://attractor.fi/",
+      "logo": "/images/logos/attractor.webp",
+      "logoWidth": 60,
+      "logoHeight": 64
     }
   ]
 }
