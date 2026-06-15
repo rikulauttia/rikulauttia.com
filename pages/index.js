@@ -70,9 +70,12 @@ const HomePage = () => {
           {work.map((item) => (
             <li
               key={item.id}
-              className="border-b border-line py-6 md:grid md:grid-cols-[14rem_1fr] md:gap-8"
+              className="border-b border-line py-6 md:grid md:grid-cols-[5rem_1fr] md:gap-8"
             >
-              <div className="mb-3 md:mb-0">
+              <div className="mb-2 text-[15px] tabular-nums text-ink-faint md:mb-0 md:pt-0.5">
+                {item.period}
+              </div>
+              <div>
                 <a
                   href={item.url}
                   target="_blank"
@@ -88,9 +91,10 @@ const HomePage = () => {
                     className="h-5 w-auto"
                   />
                 </a>
-                <div className="mt-2 text-[15px] text-ink-faint">{item.role}</div>
+                <p className="mt-3 max-w-prose text-ink-muted">
+                  <span className="text-ink">{item.role}</span> — {item.description}
+                </p>
               </div>
-              <p className="max-w-prose text-ink-muted">{item.description}</p>
             </li>
           ))}
         </ul>
