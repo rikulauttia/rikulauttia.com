@@ -47,17 +47,6 @@
       "logo": "/images/logos/attractor.webp",
       "logoWidth": 128,
       "logoHeight": 128
-    },
-    {
-      "id": "kolt",
-      "name": "Kolt",
-      "period": "2024–",
-      "role": "Founding member",
-      "description": "As a founding member, I help build Kolt's automation solutions for complex operational challenges, developing robust platforms across multiple technical domains for mission-critical applications.",
-      "url": "https://kolt.fi/",
-      "logo": "/images/logos/kolt.webp",
-      "logoWidth": 128,
-      "logoHeight": 128
     }
   ]
 }
